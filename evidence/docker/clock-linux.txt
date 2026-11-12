@@ -1,0 +1,46 @@
+timedatectl status
+               Local time: Thu 2026-11-12 03:14:05 -03
+           Universal time: Thu 2026-11-12 06:14:05 UTC
+                 RTC time: Thu 2026-11-12 06:14:04
+                Time zone: America/Sao_Paulo (-03, -0300)
+System clock synchronized: no
+              NTP service: active
+          RTC in local TZ: no
+
+timedatectl show-timesync --all
+LinkNTPServers=
+SystemNTPServers=
+RuntimeNTPServers=
+FallbackNTPServers=ntp.ubuntu.com
+ServerName=ntp.ubuntu.com
+ServerAddress=185.125.190.58
+RootDistanceMaxUSec=5s
+PollIntervalMinUSec=32s
+PollIntervalMaxUSec=34min 8s
+PollIntervalUSec=32s
+NTPMessage={ Leap=0, Version=4, Mode=4, Stratum=2, Precision=-25, RootDelay=7.873ms, RootDispersion=1.358ms, Reference=1D586304, OriginateTimestamp=Thu 2026-11-12 03:13:29 -03, ReceiveTimestamp=Thu 2026-11-12 03:13:51 -03, TransmitTimestamp=Thu 2026-11-12 03:13:51 -03, DestinationTimestamp=Thu 2026-11-12 03:13:29 -03, Ignored=no, PacketCount=75, Jitter=5.380ms }
+Frequency=-6816
+
+timedatectl status
+               Local time: Thu 2026-11-12 03:16:30 -03
+           Universal time: Thu 2026-11-12 06:16:30 UTC
+                 RTC time: Thu 2026-11-12 06:16:30
+                Time zone: America/Sao_Paulo (-03, -0300)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+timedatectl show-timesync --all
+LinkNTPServers=
+SystemNTPServers=
+RuntimeNTPServers=
+FallbackNTPServers=ntp.ubuntu.com
+ServerName=ntp.ubuntu.com
+ServerAddress=185.125.190.58
+RootDistanceMaxUSec=5s
+PollIntervalMinUSec=32s
+PollIntervalMaxUSec=34min 8s
+PollIntervalUSec=32s
+NTPMessage={ Leap=0, Version=4, Mode=4, Stratum=2, Precision=-25, RootDelay=7.614ms, RootDispersion=320us, Reference=1D586304, OriginateTimestamp=Thu 2026-11-12 03:16:08 -03, ReceiveTimestamp=Thu 2026-11-12 03:16:29 -03, TransmitTimestamp=Thu 2026-11-12 03:16:29 -03, DestinationTimestamp=Thu 2026-11-12 03:16:08 -03, Ignored=no, PacketCount=80, Jitter=6.545ms }
+Frequency=-2195154
+

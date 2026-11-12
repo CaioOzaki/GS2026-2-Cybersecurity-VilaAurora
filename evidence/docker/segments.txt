@@ -1,0 +1,3 @@
+PASS: operador alcança painel
+PASS: operador bloqueado no MQTT
+PASS: IoT bloqueado no painel

@@ -1,0 +1,86 @@
+{
+  "acquired_utc_host": "2026-11-12T04:51:51.723+00:00",
+  "scope": "Aquisição lógica de arquivos do laboratório, não imagem de disco/memória.",
+  "files": [
+    {
+      "file": "evidence/ai.json",
+      "bytes": 682,
+      "sha256": "437c5c887d8523889125ed858eb393cbba7a52f27c6238ad2d2d360eb85f67c2"
+    },
+    {
+      "file": "evidence/chaos.json",
+      "bytes": 17896,
+      "sha256": "a998fd077c827eddbf666258b5a7ba5b25c84bbece1cc484d71eacb273de3896"
+    },
+    {
+      "file": "evidence/dashboard.png",
+      "bytes": 52011,
+      "sha256": "6f75ff695ee38db71213ce8952973f14c5ac452d3a833d58c304fe47cd098da1"
+    },
+    {
+      "file": "evidence/detections.json",
+      "bytes": 2972,
+      "sha256": "f60ca123bea4e8991c54f459afa83e733d9cadb6ce06abd4bd6939946929f42a"
+    },
+    {
+      "file": "evidence/email-auth.json",
+      "bytes": 962,
+      "sha256": "20548de00c66247f0efb8d789efe22fc4287f93886c7d6aaecd2605b7bb30d73"
+    },
+    {
+      "file": "evidence/forensics/chain-verification.json",
+      "bytes": 331,
+      "sha256": "a7e98653273d3fd785567be594a3b7480a5f2d58e434d693ab95e22814a46780"
+    },
+    {
+      "file": "evidence/forensics/clock-status.json",
+      "bytes": 401,
+      "sha256": "29775374829676cba3b4a6310ae91c5cb83652d6897c83bd805f598f73f69f76"
+    },
+    {
+      "file": "evidence/forensics/continuity-events.jsonl",
+      "bytes": 1384425,
+      "sha256": "639ac899158c2b9a3ec11ee5355fb485bbcd787edbf1a58b930b1cf7b9989f37"
+    },
+    {
+      "file": "evidence/forensics/database-observation.json",
+      "bytes": 271,
+      "sha256": "da2331e199c805f1934012880e519bb9ad267fc461a87cc5e6f75c7bde651681"
+    },
+    {
+      "file": "evidence/forensics/security-events.jsonl",
+      "bytes": 16278,
+      "sha256": "7a295b80ecf8d7b65cfd7a81ec15afd8293c4d55d0961e8594df17b9aa167c72"
+    },
+    {
+      "file": "evidence/forensics/timeline.json",
+      "bytes": 3836,
+      "sha256": "29faf78885f4a76fb1ec2fa4283974c98314bb9cd1d98cea2e7e9e60d12a5be1"
+    },
+    {
+      "file": "evidence/phishing-template.eml",
+      "bytes": 267,
+      "sha256": "6a3dd24d72c7299d1c3e2fb45d816afed0a617ff2fac75d129506288735341e2"
+    },
+    {
+      "file": "evidence/phishing.json",
+      "bytes": 450,
+      "sha256": "0aa54a36cb315460e51ff40cd436215f496e95204fd196f788f74cfd8d761106"
+    },
+    {
+      "file": "evidence/security.json",
+      "bytes": 6904,
+      "sha256": "19372f191367be04b418e36e0422157f9e71ed712387c027ac652527318bff8a"
+    },
+    {
+      "file": "evidence/signed-message.eml",
+      "bytes": 776,
+      "sha256": "808e10347244a8fdeaad1c960ce5c5e1bfd4deed29d55e4ebd5880d5b5b6ffeb"
+    },
+    {
+      "file": "evidence/ui.json",
+      "bytes": 315,
+      "sha256": "f4616c7be7462a0f8714d5a36c3c1d09d52cccbb2a88ede55f939caa0e7f1a06"
+    }
+  ]
+}

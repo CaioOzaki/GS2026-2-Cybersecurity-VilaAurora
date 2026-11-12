@@ -57,6 +57,14 @@ def legacy_schedule(payload):
 
 def make_handler(edges=None,legacy=False):
     auth=Auth() if not legacy else None
+    linux_mode=os.environ.get('AURORA_DEPLOYMENT')=='linux-ubs'
+    def display_page():
+        if not linux_mode:return PAGE
+        return (PAGE.replace('Telemetria, alertas e decisões humanas para os cinco espaços comunitários.',
+                 'Piloto UBS: telemetria e alertas locais da Rede Vila Aurora.')
+            .replace('As bordas são processos lógicos no mesmo computador. VPN WireGuard, VLANs e corte real de WAN precisam do laboratório Linux/Docker. Nenhum equipamento físico está conectado.',
+                 'Esta tela mostra a UBS em containers Linux, com Mosquitto, túnel WireGuard e redes separadas. O estado do túnel aparece acima. Os dispositivos são geradores de telemetria; nenhum equipamento físico está conectado.')
+            .replace('Abrir comparação SQL Injection no laboratório isolado','Comparação SQL Injection - laboratório nativo separado'))
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):pass
         def reply(self,status,value,ctype='application/json',cookie=None):
@@ -85,13 +93,20 @@ def make_handler(edges=None,legacy=False):
                         self.reply(200,{'rows':rows});return
                     except (sqlite3.Error,ValueError):self.reply(400,{'error':'Consulta inválida.'});return
                 self.reply(404,{'error':'Recurso não encontrado.'});return
-            if p.path=='/':self.reply(200,PAGE,'text/html');return
+            if p.path=='/':self.reply(200,display_page(),'text/html');return
             if p.path=='/app.js':self.reply(200,JS,'application/javascript');return
             s=self.session()
             if not s:self.reply(401,{'error':'Entre com senha e autenticador.'});return
             if p.path=='/api/status':
                 ev={name:read_json(ROOT/'evidence'/name,{}) for name in ['security.json','ai.json','phishing.json']}
-                self.reply(200,dict(scope='Cinco bordas lógicas no host local; VPN pendente de validação Linux.',utc=utc(),edges=[e.state() for e in edges] if edges else read_json(RUNTIME/'demo-state.json',[]),evidence=ev));return
+                tunnel=None
+                if linux_mode:
+                    try:
+                        from pathlib import Path
+                        tunnel=bool(int(Path('/sys/class/net/wg0/flags').read_text().strip(),16)&1)
+                    except (OSError,ValueError):tunnel=False
+                scope=('Piloto UBS Linux | Mosquitto | '+('VPN ligada' if tunnel else 'VPN desligada: operação local')) if linux_mode else 'Cinco bordas lógicas no host local; ensaio nativo em loopback.'
+                self.reply(200,dict(scope=scope,tunnel_up=tunnel,utc=utc(),edges=[e.state() for e in edges] if edges else read_json(RUNTIME/'demo-state.json',[]),evidence=ev));return
             if p.path=='/api/history':
                 try:self.reply(200,{'rows':search(args.get('q',[''])[0])})
                 except (sqlite3.Error,ValueError):self.reply(400,{'error':'Consulta inválida.'})

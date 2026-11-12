@@ -1,0 +1,1576 @@
+{
+  "status": "concluido",
+  "scope": "Piloto UBS em containers Linux. Interface WireGuard desligada; WAN virtual, não corte de fibra física.",
+  "start_utc_host": "2026-11-12T05:41:06.302+00:00",
+  "end_utc_host": "2026-11-12T06:13:02.519+00:00",
+  "duration_monotonic_seconds": 1802.000498112,
+  "recovery_seconds": 28.914020887999868,
+  "before": {
+    "readings": 104,
+    "pending": 0,
+    "alarms": 4
+  },
+  "offline": {
+    "readings": 1432,
+    "pending": 1328,
+    "alarms": 45
+  },
+  "after": {
+    "readings": 1432,
+    "pending": 0,
+    "alarms": 45
+  },
+  "cloud_before": {
+    "events": 104
+  },
+  "cloud_offline": {
+    "events": 104
+  },
+  "cloud_after": {
+    "events": 1432
+  },
+  "new_local_events_offline": 1328,
+  "new_local_alarms_offline": 41,
+  "missing_events": 0,
+  "unexpected_events": 0,
+  "pending_after": 0,
+  "continuous_progress_percent": 100.0,
+  "samples": [
+    {
+      "readings": 104,
+      "pending": 0,
+      "alarms": 4,
+      "elapsed_seconds": 0.155,
+      "progress_since_previous": false,
+      "resources": {
+        "BlockIO": "9.1MB / 5.79MB",
+        "CPUPerc": "0.22%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.39%",
+        "MemUsage": "30.78MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "548kB / 649kB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 120,
+      "pending": 16,
+      "alarms": 4,
+      "elapsed_seconds": 21.428,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "9.1MB / 6.55MB",
+        "CPUPerc": "0.31%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.39%",
+        "MemUsage": "30.93MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "604kB / 728kB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 136,
+      "pending": 32,
+      "alarms": 5,
+      "elapsed_seconds": 42.702,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "9.1MB / 7.34MB",
+        "CPUPerc": "0.25%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.40%",
+        "MemUsage": "31.52MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "660kB / 807kB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 150,
+      "pending": 46,
+      "alarms": 5,
+      "elapsed_seconds": 64.0,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "9.1MB / 8.09MB",
+        "CPUPerc": "0.31%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.39%",
+        "MemUsage": "30.64MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "716kB / 886kB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 164,
+      "pending": 60,
+      "alarms": 6,
+      "elapsed_seconds": 85.282,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "9.1MB / 8.89MB",
+        "CPUPerc": "1.23%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.39%",
+        "MemUsage": "31.01MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "772kB / 965kB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 180,
+      "pending": 76,
+      "alarms": 6,
+      "elapsed_seconds": 106.556,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "9.1MB / 9.65MB",
+        "CPUPerc": "1.74%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.40%",
+        "MemUsage": "31.47MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "828kB / 1.04MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 196,
+      "pending": 92,
+      "alarms": 7,
+      "elapsed_seconds": 127.816,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "9.1MB / 10.4MB",
+        "CPUPerc": "0.92%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.40%",
+        "MemUsage": "31.26MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "876kB / 1.11MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 212,
+      "pending": 108,
+      "alarms": 7,
+      "elapsed_seconds": 149.097,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "9.1MB / 11.1MB",
+        "CPUPerc": "0.35%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.39%",
+        "MemUsage": "31.2MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "925kB / 1.18MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 228,
+      "pending": 124,
+      "alarms": 8,
+      "elapsed_seconds": 170.376,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "9.24MB / 12.1MB",
+        "CPUPerc": "0.33%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.39%",
+        "MemUsage": "30.86MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "980kB / 1.26MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 244,
+      "pending": 140,
+      "alarms": 8,
+      "elapsed_seconds": 191.636,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "9.52MB / 12.8MB",
+        "CPUPerc": "0.26%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.40%",
+        "MemUsage": "31.31MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.04MB / 1.34MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 260,
+      "pending": 156,
+      "alarms": 9,
+      "elapsed_seconds": 212.903,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "9.79MB / 13.6MB",
+        "CPUPerc": "0.32%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.40%",
+        "MemUsage": "31.28MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.09MB / 1.42MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 276,
+      "pending": 172,
+      "alarms": 9,
+      "elapsed_seconds": 234.172,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.1MB / 14.4MB",
+        "CPUPerc": "0.23%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.40%",
+        "MemUsage": "31.43MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.15MB / 1.5MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 292,
+      "pending": 188,
+      "alarms": 10,
+      "elapsed_seconds": 255.437,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.4MB / 15.2MB",
+        "CPUPerc": "0.26%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.41%",
+        "MemUsage": "32.17MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.21MB / 1.58MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 308,
+      "pending": 204,
+      "alarms": 10,
+      "elapsed_seconds": 276.7,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.7MB / 16MB",
+        "CPUPerc": "0.34%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.40%",
+        "MemUsage": "31.45MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.26MB / 1.66MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 324,
+      "pending": 220,
+      "alarms": 11,
+      "elapsed_seconds": 297.976,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.7MB / 16.8MB",
+        "CPUPerc": "0.20%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.40%",
+        "MemUsage": "31.46MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.32MB / 1.73MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 340,
+      "pending": 236,
+      "alarms": 11,
+      "elapsed_seconds": 319.235,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.7MB / 17.6MB",
+        "CPUPerc": "0.30%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.41%",
+        "MemUsage": "32.02MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.37MB / 1.81MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 354,
+      "pending": 250,
+      "alarms": 12,
+      "elapsed_seconds": 340.485,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.7MB / 18.4MB",
+        "CPUPerc": "0.56%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.39%",
+        "MemUsage": "31.12MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.43MB / 1.89MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 368,
+      "pending": 264,
+      "alarms": 12,
+      "elapsed_seconds": 361.749,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.7MB / 19.2MB",
+        "CPUPerc": "1.37%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.40%",
+        "MemUsage": "31.54MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.49MB / 1.97MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 384,
+      "pending": 280,
+      "alarms": 12,
+      "elapsed_seconds": 383.016,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.7MB / 20MB",
+        "CPUPerc": "1.54%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.25MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.54MB / 2.05MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 400,
+      "pending": 296,
+      "alarms": 13,
+      "elapsed_seconds": 404.276,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.7MB / 20.7MB",
+        "CPUPerc": "0.70%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.41%",
+        "MemUsage": "32.2MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.59MB / 2.12MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 416,
+      "pending": 312,
+      "alarms": 13,
+      "elapsed_seconds": 425.541,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.7MB / 21.5MB",
+        "CPUPerc": "0.22%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.41%",
+        "MemUsage": "32.04MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.64MB / 2.19MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 432,
+      "pending": 328,
+      "alarms": 14,
+      "elapsed_seconds": 446.818,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.7MB / 22.3MB",
+        "CPUPerc": "0.33%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.41%",
+        "MemUsage": "32.72MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.7MB / 2.27MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 448,
+      "pending": 344,
+      "alarms": 14,
+      "elapsed_seconds": 468.078,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.7MB / 23.3MB",
+        "CPUPerc": "0.22%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.41%",
+        "MemUsage": "32.12MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.75MB / 2.35MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 464,
+      "pending": 360,
+      "alarms": 15,
+      "elapsed_seconds": 489.327,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.7MB / 24.1MB",
+        "CPUPerc": "0.33%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "32.99MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.81MB / 2.43MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 480,
+      "pending": 376,
+      "alarms": 15,
+      "elapsed_seconds": 510.583,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "10.7MB / 25MB",
+        "CPUPerc": "0.38%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.08MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.87MB / 2.5MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 496,
+      "pending": 392,
+      "alarms": 16,
+      "elapsed_seconds": 532.192,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "18.7MB / 25.8MB",
+        "CPUPerc": "0.53%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.39%",
+        "MemUsage": "31.12MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.92MB / 2.58MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 512,
+      "pending": 408,
+      "alarms": 16,
+      "elapsed_seconds": 553.503,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "19.4MB / 26.6MB",
+        "CPUPerc": "0.27%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.11MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "1.98MB / 2.66MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 528,
+      "pending": 424,
+      "alarms": 17,
+      "elapsed_seconds": 574.791,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "19.7MB / 27.4MB",
+        "CPUPerc": "0.32%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "32.81MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.03MB / 2.74MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 544,
+      "pending": 440,
+      "alarms": 17,
+      "elapsed_seconds": 596.056,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "20MB / 28.2MB",
+        "CPUPerc": "0.30%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.41%",
+        "MemUsage": "32.54MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.09MB / 2.82MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 560,
+      "pending": 456,
+      "alarms": 18,
+      "elapsed_seconds": 617.324,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "20.3MB / 29MB",
+        "CPUPerc": "0.31%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "32.95MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.15MB / 2.9MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 574,
+      "pending": 470,
+      "alarms": 18,
+      "elapsed_seconds": 638.594,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "20.7MB / 29.9MB",
+        "CPUPerc": "0.46%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.41%",
+        "MemUsage": "32.8MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.2MB / 2.98MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 588,
+      "pending": 484,
+      "alarms": 19,
+      "elapsed_seconds": 659.889,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "21MB / 30.7MB",
+        "CPUPerc": "1.37%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.41%",
+        "MemUsage": "32.68MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.26MB / 3.06MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 604,
+      "pending": 500,
+      "alarms": 19,
+      "elapsed_seconds": 681.234,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "21.3MB / 31.5MB",
+        "CPUPerc": "1.67%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.43%",
+        "MemUsage": "33.82MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.31MB / 3.14MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 620,
+      "pending": 516,
+      "alarms": 20,
+      "elapsed_seconds": 702.517,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "21.6MB / 32.2MB",
+        "CPUPerc": "0.76%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.43%",
+        "MemUsage": "33.67MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.36MB / 3.2MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 636,
+      "pending": 532,
+      "alarms": 20,
+      "elapsed_seconds": 723.798,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "21.8MB / 33MB",
+        "CPUPerc": "0.23%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.45MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.41MB / 3.27MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 652,
+      "pending": 548,
+      "alarms": 21,
+      "elapsed_seconds": 745.075,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "22.2MB / 34MB",
+        "CPUPerc": "0.34%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "32.92MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.47MB / 3.35MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 668,
+      "pending": 564,
+      "alarms": 21,
+      "elapsed_seconds": 766.339,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "22.5MB / 34.8MB",
+        "CPUPerc": "0.21%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.29MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.52MB / 3.43MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 684,
+      "pending": 580,
+      "alarms": 22,
+      "elapsed_seconds": 787.617,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "22.8MB / 35.6MB",
+        "CPUPerc": "0.41%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.58MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.58MB / 3.51MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 700,
+      "pending": 596,
+      "alarms": 22,
+      "elapsed_seconds": 808.909,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 36.5MB",
+        "CPUPerc": "0.35%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.64MB / 3.59MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 716,
+      "pending": 612,
+      "alarms": 23,
+      "elapsed_seconds": 830.176,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 37.3MB",
+        "CPUPerc": "0.27%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "32.85MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.69MB / 3.67MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 732,
+      "pending": 628,
+      "alarms": 23,
+      "elapsed_seconds": 851.431,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 38.1MB",
+        "CPUPerc": "0.35%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.41MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.75MB / 3.75MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 748,
+      "pending": 644,
+      "alarms": 24,
+      "elapsed_seconds": 872.701,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 38.9MB",
+        "CPUPerc": "0.41%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.56MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.8MB / 3.83MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 764,
+      "pending": 660,
+      "alarms": 24,
+      "elapsed_seconds": 893.989,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 39.8MB",
+        "CPUPerc": "0.21%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.21MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.86MB / 3.91MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 779,
+      "pending": 675,
+      "alarms": 25,
+      "elapsed_seconds": 915.257,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 40.6MB",
+        "CPUPerc": "0.37%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.43%",
+        "MemUsage": "33.97MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.92MB / 3.98MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 792,
+      "pending": 688,
+      "alarms": 25,
+      "elapsed_seconds": 936.521,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 41.4MB",
+        "CPUPerc": "1.27%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.06MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "2.97MB / 4.06MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 808,
+      "pending": 704,
+      "alarms": 26,
+      "elapsed_seconds": 957.809,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 42.2MB",
+        "CPUPerc": "1.70%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.43MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.03MB / 4.14MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 824,
+      "pending": 720,
+      "alarms": 26,
+      "elapsed_seconds": 979.127,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 43MB",
+        "CPUPerc": "1.27%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.39MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.08MB / 4.22MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 840,
+      "pending": 736,
+      "alarms": 27,
+      "elapsed_seconds": 1000.448,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 43.7MB",
+        "CPUPerc": "0.31%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.59MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.13MB / 4.28MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 856,
+      "pending": 752,
+      "alarms": 27,
+      "elapsed_seconds": 1021.798,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 44.5MB",
+        "CPUPerc": "0.33%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.24MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.18MB / 4.36MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 872,
+      "pending": 768,
+      "alarms": 28,
+      "elapsed_seconds": 1043.123,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 45.5MB",
+        "CPUPerc": "0.41%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.11MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.24MB / 4.44MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 888,
+      "pending": 784,
+      "alarms": 28,
+      "elapsed_seconds": 1064.428,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 46.4MB",
+        "CPUPerc": "0.28%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.43%",
+        "MemUsage": "33.84MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.29MB / 4.52MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 904,
+      "pending": 800,
+      "alarms": 29,
+      "elapsed_seconds": 1085.761,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 47.2MB",
+        "CPUPerc": "0.41%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.43%",
+        "MemUsage": "33.95MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.35MB / 4.6MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 920,
+      "pending": 816,
+      "alarms": 29,
+      "elapsed_seconds": 1107.056,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 48MB",
+        "CPUPerc": "0.39%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.43%",
+        "MemUsage": "34.15MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.4MB / 4.67MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 936,
+      "pending": 832,
+      "alarms": 30,
+      "elapsed_seconds": 1128.334,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 48.8MB",
+        "CPUPerc": "0.28%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.43%",
+        "MemUsage": "34.15MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.46MB / 4.75MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 952,
+      "pending": 848,
+      "alarms": 30,
+      "elapsed_seconds": 1149.616,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 49.6MB",
+        "CPUPerc": "0.37%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.44%",
+        "MemUsage": "34.42MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.51MB / 4.83MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 968,
+      "pending": 864,
+      "alarms": 31,
+      "elapsed_seconds": 1170.906,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 50.4MB",
+        "CPUPerc": "0.42%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.44%",
+        "MemUsage": "34.81MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.57MB / 4.91MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 984,
+      "pending": 880,
+      "alarms": 31,
+      "elapsed_seconds": 1192.201,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 51.2MB",
+        "CPUPerc": "0.27%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.44%",
+        "MemUsage": "35.09MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.63MB / 4.99MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 998,
+      "pending": 894,
+      "alarms": 32,
+      "elapsed_seconds": 1213.491,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 52MB",
+        "CPUPerc": "0.53%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.44%",
+        "MemUsage": "34.71MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.68MB / 5.07MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1012,
+      "pending": 908,
+      "alarms": 32,
+      "elapsed_seconds": 1234.946,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 52.9MB",
+        "CPUPerc": "1.28%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.44%",
+        "MemUsage": "34.66MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.74MB / 5.15MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1028,
+      "pending": 924,
+      "alarms": 33,
+      "elapsed_seconds": 1256.327,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 53.7MB",
+        "CPUPerc": "1.61%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.44%",
+        "MemUsage": "34.79MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.79MB / 5.23MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1044,
+      "pending": 940,
+      "alarms": 33,
+      "elapsed_seconds": 1277.658,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 54.6MB",
+        "CPUPerc": "1.71%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.44%",
+        "MemUsage": "34.84MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.85MB / 5.3MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1060,
+      "pending": 956,
+      "alarms": 34,
+      "elapsed_seconds": 1299.136,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 55.3MB",
+        "CPUPerc": "1.45%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.44%",
+        "MemUsage": "34.66MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.9MB / 5.38MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1076,
+      "pending": 972,
+      "alarms": 34,
+      "elapsed_seconds": 1320.514,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 56.3MB",
+        "CPUPerc": "0.52%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.44%",
+        "MemUsage": "34.92MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "3.95MB / 5.45MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1092,
+      "pending": 988,
+      "alarms": 35,
+      "elapsed_seconds": 1342.017,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 57.1MB",
+        "CPUPerc": "0.44%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.44%",
+        "MemUsage": "34.94MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4MB / 5.52MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1108,
+      "pending": 1004,
+      "alarms": 35,
+      "elapsed_seconds": 1363.629,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 57.9MB",
+        "CPUPerc": "0.47%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.45%",
+        "MemUsage": "35.41MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.05MB / 5.6MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1124,
+      "pending": 1020,
+      "alarms": 36,
+      "elapsed_seconds": 1385.087,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 58.7MB",
+        "CPUPerc": "0.42%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.45%",
+        "MemUsage": "35.69MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.11MB / 5.68MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1140,
+      "pending": 1036,
+      "alarms": 36,
+      "elapsed_seconds": 1406.487,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 59.6MB",
+        "CPUPerc": "0.33%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.44%",
+        "MemUsage": "35.14MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.17MB / 5.76MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1156,
+      "pending": 1052,
+      "alarms": 37,
+      "elapsed_seconds": 1427.858,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 60.3MB",
+        "CPUPerc": "0.50%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.44%",
+        "MemUsage": "34.99MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.22MB / 5.84MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1172,
+      "pending": 1068,
+      "alarms": 37,
+      "elapsed_seconds": 1449.254,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "23MB / 61.2MB",
+        "CPUPerc": "0.47%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.45%",
+        "MemUsage": "35.22MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.28MB / 5.92MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1188,
+      "pending": 1084,
+      "alarms": 38,
+      "elapsed_seconds": 1471.119,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "31.5MB / 62.1MB",
+        "CPUPerc": "0.55%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.40%",
+        "MemUsage": "31.31MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.33MB / 5.99MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1204,
+      "pending": 1100,
+      "alarms": 38,
+      "elapsed_seconds": 1492.484,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "31.8MB / 62.9MB",
+        "CPUPerc": "0.30%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "32.91MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.39MB / 6.07MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1220,
+      "pending": 1116,
+      "alarms": 39,
+      "elapsed_seconds": 1513.95,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "32.1MB / 63.8MB",
+        "CPUPerc": "0.49%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.21MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.44MB / 6.15MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1236,
+      "pending": 1132,
+      "alarms": 39,
+      "elapsed_seconds": 1535.34,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "32.5MB / 64.6MB",
+        "CPUPerc": "0.38%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.41%",
+        "MemUsage": "32.55MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.5MB / 6.23MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1252,
+      "pending": 1148,
+      "alarms": 40,
+      "elapsed_seconds": 1556.647,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "32.8MB / 65.4MB",
+        "CPUPerc": "0.29%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.41MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.55MB / 6.31MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1268,
+      "pending": 1164,
+      "alarms": 40,
+      "elapsed_seconds": 1577.989,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "33.1MB / 66.2MB",
+        "CPUPerc": "0.73%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.41%",
+        "MemUsage": "32.5MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.61MB / 6.39MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1284,
+      "pending": 1180,
+      "alarms": 41,
+      "elapsed_seconds": 1599.416,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "33.5MB / 67.3MB",
+        "CPUPerc": "0.48%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "32.93MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.66MB / 6.47MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1300,
+      "pending": 1196,
+      "alarms": 41,
+      "elapsed_seconds": 1620.797,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "33.8MB / 68MB",
+        "CPUPerc": "0.34%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.55MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.72MB / 6.55MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1314,
+      "pending": 1210,
+      "alarms": 42,
+      "elapsed_seconds": 1642.159,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "34.1MB / 68.8MB",
+        "CPUPerc": "0.40%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.5MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.78MB / 6.63MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1329,
+      "pending": 1225,
+      "alarms": 42,
+      "elapsed_seconds": 1663.765,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "45.2MB / 69.7MB",
+        "CPUPerc": "0.62%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.39%",
+        "MemUsage": "31MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.83MB / 6.7MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1344,
+      "pending": 1240,
+      "alarms": 42,
+      "elapsed_seconds": 1685.351,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "53.7MB / 70.5MB",
+        "CPUPerc": "1.40%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.39%",
+        "MemUsage": "31.21MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.89MB / 6.78MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1360,
+      "pending": 1256,
+      "alarms": 43,
+      "elapsed_seconds": 1706.7,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "54MB / 71.4MB",
+        "CPUPerc": "2.19%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.56MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "4.94MB / 6.86MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1376,
+      "pending": 1272,
+      "alarms": 43,
+      "elapsed_seconds": 1728.038,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "54.4MB / 72.2MB",
+        "CPUPerc": "1.98%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.42%",
+        "MemUsage": "33.08MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "5MB / 6.94MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1392,
+      "pending": 1288,
+      "alarms": 44,
+      "elapsed_seconds": 1749.39,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "55MB / 72.9MB",
+        "CPUPerc": "0.70%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.43%",
+        "MemUsage": "34.02MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "5.04MB / 7MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1408,
+      "pending": 1304,
+      "alarms": 44,
+      "elapsed_seconds": 1770.71,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "55.3MB / 73.7MB",
+        "CPUPerc": "0.27%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.43%",
+        "MemUsage": "34.01MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "5.09MB / 7.08MB",
+        "PIDs": "5"
+      }
+    },
+    {
+      "readings": 1424,
+      "pending": 1320,
+      "alarms": 45,
+      "elapsed_seconds": 1792.0,
+      "progress_since_previous": true,
+      "resources": {
+        "BlockIO": "55.7MB / 74.6MB",
+        "CPUPerc": "0.48%",
+        "Container": "65373519758a9003ba5ee4524d64e20b7290f8fb0ac2d24a766de123c2e31930",
+        "ID": "65373519758a",
+        "MemPerc": "0.43%",
+        "MemUsage": "33.9MiB / 7.719GiB",
+        "Name": "vila-aurora-lab-edge-1",
+        "NetIO": "5.15MB / 7.16MB",
+        "PIDs": "5"
+      }
+    }
+  ],
+  "wireguard_transfer_before": "DNIBvBiPBOCXLMakMni34I2H98f6HRc1IKkMEkqTkn8=\t167652\t127260",
+  "wireguard_transfer_after": "DNIBvBiPBOCXLMakMni34I2H98f6HRc1IKkMEkqTkn8=\t298556\t406392",
+  "telemetry_frozen_for_final_snapshot": true,
+  "physical_energy": "Não medida; requer wattímetro.",
+  "clock": "Consultar clock-linux.txt; UTC do host e duração monotônica são grandezas distintas.",
+  "passed": true
+}

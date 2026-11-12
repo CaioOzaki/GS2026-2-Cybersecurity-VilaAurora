@@ -1,4 +1,4 @@
-"""Adaptador Mosquitto para a mesma regra/fila local. Piloto Docker ainda não validado."""
+"""Adaptador Mosquitto para a mesma regra/fila local no piloto Linux UBS."""
 import json,time,threading
 import paho.mqtt.client as mqtt
 from http.server import ThreadingHTTPServer

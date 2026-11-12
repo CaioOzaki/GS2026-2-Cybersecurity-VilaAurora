@@ -1,0 +1,28 @@
+{
+  "start_utc_host": "2026-11-12T06:17:06.126982+00:00",
+  "scope": "Regressão curta da versão revisada; NÃO substitui o ensaio de 30 minutos",
+  "duration_seconds": 45.378461459999926,
+  "recovery_seconds": 1.9939537690001998,
+  "before": {
+    "n": 1596,
+    "pending": 0
+  },
+  "cloud_before": {
+    "n": 1596
+  },
+  "offline": {
+    "n": 1632,
+    "pending": 36
+  },
+  "cloud_offline": {
+    "n": 1596
+  },
+  "after": {
+    "n": 1632,
+    "pending": 0
+  },
+  "cloud_after": {
+    "n": 1632
+  },
+  "passed": true
+}

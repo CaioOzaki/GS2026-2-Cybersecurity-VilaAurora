@@ -1,0 +1,13 @@
+{
+  "phase": "Ensaio longo da versão-base, antes de CRL/abandono de root/visualizador",
+  "utc_host": "2026-11-12T06:09:13.469948+00:00",
+  "image_ids": {
+    "edge": "sha256:8a6a44abdf23627a59e33f29dc64342b7989adb2ad03c7cb1ffda7f17a089a74",
+    "cloud": "sha256:0bb19bc06e7bc6894d9ddc7bd34309b1f72b4eb5fa9e1fe7f4cbde7fab5c9a59",
+    "field": "sha256:418d638878757ae3639862639ded38b467008b551ec4f60514e046ded737b164",
+    "operator": "sha256:7daa2bd90ade4280f91a1fe864701382f662160fb1392179530840c7ffc8161d",
+    "admin": "sha256:e9d5c393331844db14b3a772170fc241291a4ec3396f4cbc8b8b45fcb9ae72a1"
+  },
+  "logical_scope": "Uma UBS; quatro geradores de telemetria; redes virtuais Docker",
+  "test_script_sha256": "b39c5669dcf99d297a6f325324e0a78550eab018a95fc0db6c15ed3c55bf8730"
+}

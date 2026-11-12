@@ -24,10 +24,12 @@ services:
       ROLE: edge
       AURORA_RUNTIME: /state
       AURORA_CLOUD: https://cloud:9443/ingest
+      AURORA_DEPLOYMENT: linux-ubs
     extra_hosts:
       - cloud:10.77.0.1
     volumes:
       - ./.runtime/docker/edge:/state
+      - ./evidence:/app/evidence:ro
     networks:
       wan:
         ipv4_address: 172.29.0.3
@@ -56,10 +58,17 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile
-    environment: {ROLE: observer}
+    environment:
+      ROLE: viewer
+      AURORA_UPSTREAM: http://172.29.20.2:8080
+    cap_add: [NET_ADMIN]
+    ports:
+      - 127.0.0.1:8088:8088
     networks:
       operators:
         ipv4_address: 172.29.20.10
+      viewer_access:
+        ipv4_address: 172.29.40.10
   admin:
     build:
       context: .
@@ -68,7 +77,25 @@ services:
     networks:
       management:
         ipv4_address: 172.29.30.10
+  probe:
+    profiles: [tests]
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    environment:
+      ROLE: observer
+      AURORA_RUNTIME: /state
+    extra_hosts:
+      - broker-ubs:172.29.10.2
+    volumes:
+      - ./.runtime/docker/probe:/state:ro
+    networks:
+      - iot
 networks:
+  viewer_access:
+    # Ponte de publicação em loopback; firewall do visualizador nega saída geral.
+    ipam:
+      config: [{subnet: 172.29.40.0/24}]
   wan:
     internal: true
     ipam:
@@ -85,5 +112,5 @@ networks:
     internal: true
     ipam:
       config: [{subnet: 172.29.30.0/24}]
-# Sem ports: nenhum serviço é publicado na Internet ou no host.
+# Apenas o visualizador publica uma porta em loopback; nenhuma porta na Internet/LAN.
 # Piloto Linux de uma UBS. Replicar por local após validar o piloto.

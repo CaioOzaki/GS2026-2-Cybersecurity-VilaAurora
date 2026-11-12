@@ -18,7 +18,7 @@ def main():
                 value={'temperatura':12 if count%8==0 else 5,'nivel':60,'energia':75,'acesso':0}[kind]
                 info=client.publish(f'sites/ubs/devices/{name}/telemetry',json.dumps({'value':value}),qos=1)
                 info.wait_for_publish(timeout=5)
-            except OSError:time.sleep(2)
+            except (OSError,RuntimeError,ValueError):time.sleep(2)
             finally:client.disconnect();client.loop_stop()
         count+=1;time.sleep(5)
 

@@ -1,0 +1,104 @@
+cloud-1  | [#] ip link add wg0 type wireguard
+cloud-1  | [#] wg setconf wg0 /dev/fd/63
+cloud-1  | [#] ip -4 address add 10.77.0.1/24 dev wg0
+cloud-1  | [#] ip link set mtu 1420 up dev wg0
+edge-1   | 1794464202: New connection from 172.29.10.10:46895 on port 8883.
+edge-1   | 1794464202: New client connected from 172.29.10.10:46895 as ubs-energia (p2, c1, k60, u'ubs-energia').
+edge-1   | 1794464202: Client ubs-energia disconnected.
+edge-1   | 1794464202: New connection from 172.29.10.10:39085 on port 8883.
+edge-1   | 1794464202: New client connected from 172.29.10.10:39085 as ubs-acesso (p2, c1, k60, u'ubs-acesso').
+edge-1   | 1794464203: Client ubs-acesso disconnected.
+edge-1   | 1794464208: New connection from 172.29.10.10:38327 on port 8883.
+edge-1   | 1794464208: New client connected from 172.29.10.10:38327 as ubs-temperatura (p2, c1, k60, u'ubs-temperatura').
+edge-1   | 1794464208: Client ubs-temperatura disconnected.
+edge-1   | 1794464208: New connection from 172.29.10.10:47667 on port 8883.
+edge-1   | 1794464208: New client connected from 172.29.10.10:47667 as ubs-nivel (p2, c1, k60, u'ubs-nivel').
+edge-1   | 1794464208: Client ubs-nivel disconnected.
+edge-1   | 1794464208: New connection from 172.29.10.10:49283 on port 8883.
+edge-1   | 1794464208: New client connected from 172.29.10.10:49283 as ubs-energia (p2, c1, k60, u'ubs-energia').
+edge-1   | 1794464208: Client ubs-energia disconnected.
+edge-1   | 1794464208: New connection from 172.29.10.10:41499 on port 8883.
+edge-1   | 1794464208: New client connected from 172.29.10.10:41499 as ubs-acesso (p2, c1, k60, u'ubs-acesso').
+edge-1   | 1794464208: Client ubs-acesso disconnected.
+edge-1   | 1794464213: New connection from 172.29.10.10:57345 on port 8883.
+edge-1   | 1794464213: New client connected from 172.29.10.10:57345 as ubs-temperatura (p2, c1, k60, u'ubs-temperatura').
+edge-1   | 1794464213: Client ubs-temperatura disconnected.
+edge-1   | 1794464213: New connection from 172.29.10.10:59175 on port 8883.
+edge-1   | 1794464213: New client connected from 172.29.10.10:59175 as ubs-nivel (p2, c1, k60, u'ubs-nivel').
+edge-1   | 1794464213: Client ubs-nivel disconnected.
+edge-1   | 1794464213: New connection from 172.29.10.10:48949 on port 8883.
+edge-1   | 1794464213: New client connected from 172.29.10.10:48949 as ubs-energia (p2, c1, k60, u'ubs-energia').
+edge-1   | 1794464213: Client ubs-energia disconnected.
+edge-1   | 1794464213: New connection from 172.29.10.10:51745 on port 8883.
+edge-1   | 1794464213: New client connected from 172.29.10.10:51745 as ubs-acesso (p2, c1, k60, u'ubs-acesso').
+edge-1   | 1794464213: Client ubs-acesso disconnected.
+edge-1   | 1794464218: New connection from 172.29.10.10:53893 on port 8883.
+edge-1   | 1794464218: New client connected from 172.29.10.10:53893 as ubs-temperatura (p2, c1, k60, u'ubs-temperatura').
+edge-1   | 1794464218: Client ubs-temperatura disconnected.
+edge-1   | 1794464218: New connection from 172.29.10.10:58007 on port 8883.
+edge-1   | 1794464218: New client connected from 172.29.10.10:58007 as ubs-nivel (p2, c1, k60, u'ubs-nivel').
+edge-1   | 1794464219: Client ubs-nivel disconnected.
+edge-1   | 1794464219: New connection from 172.29.10.10:41047 on port 8883.
+edge-1   | 1794464219: New client connected from 172.29.10.10:41047 as ubs-energia (p2, c1, k60, u'ubs-energia').
+edge-1   | 1794464219: Client ubs-energia disconnected.
+edge-1   | 1794464219: New connection from 172.29.10.10:42247 on port 8883.
+edge-1   | 1794464219: New client connected from 172.29.10.10:42247 as ubs-acesso (p2, c1, k60, u'ubs-acesso').
+edge-1   | 1794464219: Client ubs-acesso disconnected.
+edge-1   | 1794464227: New connection from 172.29.10.10:41927 on port 8883.
+edge-1   | 1794464227: New client connected from 172.29.10.10:41927 as ubs-temperatura (p2, c1, k60, u'ubs-temperatura').
+edge-1   | 1794464227: Client ubs-temperatura disconnected.
+edge-1   | 1794464227: New connection from 172.29.10.10:48095 on port 8883.
+edge-1   | 1794464227: New client connected from 172.29.10.10:48095 as ubs-nivel (p2, c1, k60, u'ubs-nivel').
+edge-1   | 1794464227: Client ubs-nivel disconnected.
+edge-1   | 1794464227: New connection from 172.29.10.10:39367 on port 8883.
+edge-1   | 1794464227: New client connected from 172.29.10.10:39367 as ubs-energia (p2, c1, k60, u'ubs-energia').
+edge-1   | 1794464227: Client ubs-energia disconnected.
+edge-1   | 1794464227: New connection from 172.29.10.10:42673 on port 8883.
+edge-1   | 1794464227: New client connected from 172.29.10.10:42673 as ubs-acesso (p2, c1, k60, u'ubs-acesso').
+edge-1   | 1794464227: Client ubs-acesso disconnected.
+edge-1   | 1794464232: New connection from 172.29.10.10:53739 on port 8883.
+edge-1   | 1794464232: New client connected from 172.29.10.10:53739 as ubs-temperatura (p2, c1, k60, u'ubs-temperatura').
+edge-1   | 1794464232: Client ubs-temperatura disconnected.
+edge-1   | 1794464232: New connection from 172.29.10.10:52447 on port 8883.
+edge-1   | 1794464232: New client connected from 172.29.10.10:52447 as ubs-nivel (p2, c1, k60, u'ubs-nivel').
+edge-1   | 1794464232: Client ubs-nivel disconnected.
+edge-1   | 1794464232: New connection from 172.29.10.10:37733 on port 8883.
+edge-1   | 1794464232: New client connected from 172.29.10.10:37733 as ubs-energia (p2, c1, k60, u'ubs-energia').
+edge-1   | 1794464232: Client ubs-energia disconnected.
+edge-1   | 1794464232: New connection from 172.29.10.10:44175 on port 8883.
+edge-1   | 1794464232: New client connected from 172.29.10.10:44175 as ubs-acesso (p2, c1, k60, u'ubs-acesso').
+edge-1   | 1794464232: Client ubs-acesso disconnected.
+edge-1   | 1794464237: New connection from 172.29.10.10:36249 on port 8883.
+edge-1   | 1794464237: New client connected from 172.29.10.10:36249 as ubs-temperatura (p2, c1, k60, u'ubs-temperatura').
+edge-1   | 1794464237: Client ubs-temperatura disconnected.
+edge-1   | 1794464237: New connection from 172.29.10.10:35543 on port 8883.
+edge-1   | 1794464237: New client connected from 172.29.10.10:35543 as ubs-nivel (p2, c1, k60, u'ubs-nivel').
+edge-1   | 1794464238: Client ubs-nivel disconnected.
+edge-1   | 1794464238: New connection from 172.29.10.10:50411 on port 8883.
+edge-1   | 1794464238: New client connected from 172.29.10.10:50411 as ubs-energia (p2, c1, k60, u'ubs-energia').
+edge-1   | 1794464238: Client ubs-energia disconnected.
+edge-1   | 1794464238: New connection from 172.29.10.10:35553 on port 8883.
+edge-1   | 1794464238: New client connected from 172.29.10.10:35553 as ubs-acesso (p2, c1, k60, u'ubs-acesso').
+edge-1   | 1794464238: Client ubs-acesso disconnected.
+edge-1   | 1794464243: New connection from 172.29.10.10:32841 on port 8883.
+edge-1   | 1794464243: New client connected from 172.29.10.10:32841 as ubs-temperatura (p2, c1, k60, u'ubs-temperatura').
+edge-1   | 1794464243: Client ubs-temperatura disconnected.
+edge-1   | 1794464243: New connection from 172.29.10.10:44137 on port 8883.
+edge-1   | 1794464243: New client connected from 172.29.10.10:44137 as ubs-nivel (p2, c1, k60, u'ubs-nivel').
+edge-1   | 1794464243: Client ubs-nivel disconnected.
+edge-1   | 1794464243: New connection from 172.29.10.10:47981 on port 8883.
+edge-1   | 1794464243: New client connected from 172.29.10.10:47981 as ubs-energia (p2, c1, k60, u'ubs-energia').
+edge-1   | 1794464243: Client ubs-energia disconnected.
+edge-1   | 1794464243: New connection from 172.29.10.10:46329 on port 8883.
+edge-1   | 1794464243: New client connected from 172.29.10.10:46329 as ubs-acesso (p2, c1, k60, u'ubs-acesso').
+edge-1   | 1794464243: Client ubs-acesso disconnected.
+edge-1   | 1794464248: New connection from 172.29.10.10:40113 on port 8883.
+edge-1   | 1794464248: New client connected from 172.29.10.10:40113 as ubs-temperatura (p2, c1, k60, u'ubs-temperatura').
+edge-1   | 1794464248: Client ubs-temperatura disconnected.
+edge-1   | 1794464248: New connection from 172.29.10.10:37705 on port 8883.
+edge-1   | 1794464248: New client connected from 172.29.10.10:37705 as ubs-nivel (p2, c1, k60, u'ubs-nivel').
+edge-1   | 1794464248: Client ubs-nivel disconnected.
+edge-1   | 1794464248: New connection from 172.29.10.10:33367 on port 8883.
+edge-1   | 1794464248: New client connected from 172.29.10.10:33367 as ubs-energia (p2, c1, k60, u'ubs-energia').
+edge-1   | 1794464249: Client ubs-energia disconnected.
+edge-1   | 1794464249: New connection from 172.29.10.10:40589 on port 8883.

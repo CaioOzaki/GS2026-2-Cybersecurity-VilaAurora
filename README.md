@@ -9,10 +9,10 @@ Caio Yudi Ozaki Godinho. Trabalho individual. Somente dados sintéticos.
 - IA Isolation Forest: treino normal separado do teste, precisão 86,36%, revocação 63,33%, falsos positivos 2%. Não comanda atuadores. Não usa LLM.
 - Campanha local automatizada com cinco contas fictícias, sem mensagens externas ou coleta de senhas. Assinatura DKIM verificada e adulteração rejeitada; SPF/DMARC documentados em zona fictícia offline.
 - Experimento concluído do serviço coletor: **1802 s indisponível**, 3440 publicações no período sem falha, 3445 eventos locais/únicos na nuvem (inclui cinco leituras iniciais), **zero perda** e fila esvaziada em 26,015 s. Resultado integral: `evidence/chaos.json`. Relógio monotônico, cinco bordas lógicas e reconciliação por UUID.
-- **Docker/WireGuard/segmentação: preparados, ainda não executados no computador de desenvolvimento.** O perfil Linux é um piloto da UBS; não equivale a cinco instalações físicas prontas.
-- Windows sem sincronização NTP na consulta realizada. Horários UTC são os do host; a ordem causal e a duração têm contador monotônico. Energia física não medida.
+- **Piloto Linux validado em Ubuntu 24.04/WSL2 e Docker Desktop:** 9/9 verificações de rede/privilégios, seis cenários Mosquitto de TLS/ACL/CRL e 25/25 testes de segurança repetidos em Linux. Interface WireGuard desligada durante **1802.000 s**, 1328 novas leituras e 41 novos alarmes locais; **zero mensagens perdidas**, fila recuperada em **28.914 s**. A revisão com CRL/processos UID 1000 teve regressão curta complementar e teste real do painel. O perfil é um piloto UBS; não equivale a cinco instalações físicas.
+- Windows sem sincronização NTP na consulta original. Linux contactou servidor NTP, mas timedatectl ainda indicou relógio não sincronizado. Horários UTC são os do host; a ordem causal e a duração têm contador monotônico. Energia física não medida.
 
-Não apresentar esta versão como implantação de campo ou como cumprimento integral dos RT-06, RT-07, RT-12 e RT-23. O relatório separa execução local, configurações preparadas e limitações.
+O relatório distingue as fases nativa e Linux. Acesso administrativo remoto SSH/RDP não é oferecido; MFA protege o painel. Persistem limitações de sincronismo absoluto, coleta central autenticada de logs entre hosts, energia e operação física. Não apresentar o laboratório como instalação em campo.
 
 ## 1. Executar o laboratório local
 
@@ -71,22 +71,38 @@ Os scripts substituem os resultados em `evidence/`; preserve uma cópia assinada
 
 O broker nativo NÃO é Mosquitto: implementa CONNECT com clean session, PUBLISH QoS0/1, PING e DISCONNECT, sem SUBSCRIBE, retained e last-will. Foi conferido por um cliente Paho independente. A versão Docker utiliza Mosquitto com assinante real. Cinco bordas nativas compartilham o host e o processo; não resistem à falha deste computador. SIEM é um correlacionador próprio, não Wazuh.
 
-## 4. Linux/Docker - próxima validação obrigatória
+## 4. Linux/Docker - reprodução do piloto validado
 
-Veja `docs/DOCKER_WINDOWS.md`. A configuração não tem portas publicadas. Piloto UBS: segmentos IoT, operadores e administração separados; borda permite MQTT apenas a IoT e painel aos outros dois; coletor aceita HTTPS apenas pelo túnel. Testes geram evidências somente quando executados:
+Veja `docs/DOCKER_WINDOWS.md`. Clone no diretório pessoal do Ubuntu; não use um bind-mount Windows para os segredos. O piloto possui segmentos IoT, operadores e administração separados, além da rede de transporte do túnel. Apenas o visualizador publica **127.0.0.1:8088**, sem exposição na LAN/Internet.
 
 ```sh
-python docker/prepare.py
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python docker/prepare.py
 docker compose up --build -d
-sh docker/validate.sh
-sh docker/chaos-wan.sh
-docker compose logs --no-color > evidence/docker/containers.txt
-docker compose down
+python3 docker/validate.py
+python3 docker/chaos.py
 ```
 
-No WSL, use Python/venv Linux para executar `prepare.py`. As bibliotecas de `requirements.txt` precisam estar instaladas. O script `chaos-wan.sh` derruba a interface do túnel, sem derrubar o tráfego IoT local; mede pelo menos 1802 s. Depois compare a fila, os UUIDs e o total da nuvem. Não publique um resultado como aprovado sem conferir esses arquivos.
+O teste longo demora pelo menos 30 minutos reais e substitui seu resultado em `evidence/docker/`; preserve a coleta entregue antes de repetir. A interface WireGuard é desligada, mantendo MQTT, regras locais e SQLite. Ao retornar, os UUIDs locais e remotos são comparados. O gerador é congelado brevemente somente na reconciliação para tornar essa comparação estável e depois retomado.
 
-WireGuard autentica máquinas por chave. O MFA implementado protege o painel, **não transforma o túnel em uma VPN com MFA de administrador**. Administração remota não é oferecida nesta versão (sem SSH/RDP). Uma implantação profissional precisa integrar um gateway de acesso administrativo com MFA, reduzir privilégios de containers, autenticar transporte central dos logs e testar renovação/revogação também no Mosquitto. O broker Docker usa root no piloto para evitar incompatibilidade de permissões dos bind-mounts Windows; isso deve ser corrigido antes de produção.
+Abra `http://127.0.0.1:8088/`. Consulte a senha e semente TOTP **somente localmente** em `.runtime/docker/edge/credentials.json`. Não as grave nem publique. O painel usa HTTP no segmento isolado e em loopback; uma implantação distribuída exige HTTPS também na interface humana. Não há SSH/RDP remoto. WireGuard autentica máquinas; MFA TOTP protege as contas do painel.
+
+Para repetir TLS/ACL, construa a imagem de teste e execute o probe somente na rede própria:
+
+```sh
+docker compose --profile tests build probe
+docker compose run --rm --no-deps --user 1000:1000 --entrypoint python probe /app/docker/probe_mqtt.py before
+.venv/bin/python docker/rotate_probe.py
+docker compose restart edge
+# Aguarde o broker voltar antes do próximo comando.
+docker compose run --rm --no-deps --user 1000:1000 --entrypoint python probe /app/docker/probe_mqtt.py after
+python3 docker/short_regression.py
+```
+
+O primeiro probe confere certificado válido, ausência de certificado, CA estrangeira e publicação em tópico indevido. A estação emissora revoga o certificado de teste, assina uma CRL e emite outro serial para o mesmo dispositivo. O reinício controlado do broker força reconexão: o serial antigo é recusado e o novo aceito. A CRL não é a lista JSON do broker didático. A chave da CA permanece fora dos containers.
+
+`prepare.py` gera novas chaves WireGuard e redistribui arquivos privados: execute com o perfil parado, nunca durante o ensaio. A inicialização precisa de root/NET_ADMIN para a rede; os cinco processos principais passam a UID 1000. O host Docker continua sendo uma fronteira de confiança. Mantenha a CRL renovada antes de sete dias. Para parar, `docker compose down`; os dados privados são preservados.
 
 ## 5. Proteção de segredos e evidências
 

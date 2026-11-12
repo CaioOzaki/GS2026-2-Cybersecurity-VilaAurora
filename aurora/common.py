@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RUNTIME = Path(os.environ.get('AURORA_RUNTIME', ROOT / '.runtime')).resolve()
-RUNTIME.mkdir(parents=True, exist_ok=True)
+RUNTIME.mkdir(parents=True, exist_ok=True,mode=0o700)
 SITES = ['centro', 'escola', 'ubs', 'horta', 'abrigo']
 KINDS = ['temperatura', 'nivel', 'energia', 'acesso']
 LOCK = threading.RLock()

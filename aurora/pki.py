@@ -1,4 +1,4 @@
-import ipaddress, ssl
+import ipaddress, ssl, os
 from datetime import datetime, timedelta, timezone
 from cryptography import x509
 from cryptography.hazmat.primitives import hashes, serialization
@@ -11,10 +11,22 @@ PKI = RUNTIME / 'pki'
 def _key(): return rsa.generate_private_key(public_exponent=65537, key_size=2048)
 
 def _store(name, key, cert):
-    PKI.mkdir(exist_ok=True)
+    PKI.mkdir(exist_ok=True,mode=0o700)
     (PKI / (name+'.key')).write_bytes(key.private_bytes(serialization.Encoding.PEM,
         serialization.PrivateFormat.PKCS8, serialization.NoEncryption()))
     (PKI / (name+'.crt')).write_bytes(cert.public_bytes(serialization.Encoding.PEM))
+    if os.name!='nt':(PKI/(name+'.key')).chmod(0o600)
+
+def write_crl():
+    """Somente a estação emissora, que possui ca.key, assina a CRL pública."""
+    ca=x509.load_pem_x509_certificate((PKI/'ca.crt').read_bytes())
+    key=serialization.load_pem_private_key((PKI/'ca.key').read_bytes(),None)
+    now=datetime.now(timezone.utc)
+    builder=x509.CertificateRevocationListBuilder().issuer_name(ca.subject).last_update(now-timedelta(minutes=5)).next_update(now+timedelta(days=7))
+    for serial in read_json(PKI/'revoked.json',[]):
+        cert=x509.RevokedCertificateBuilder().serial_number(int(serial,16)).revocation_date(now).build()
+        builder=builder.add_revoked_certificate(cert)
+    (PKI/'ca.crl').write_bytes(builder.sign(key,hashes.SHA256()).public_bytes(serialization.Encoding.PEM))
 
 def issue(name, server=False, ca_name='ca'):
     key = _key()
@@ -45,7 +57,9 @@ def create_ca(name='ca'):
     _store(name,key,cert)
 
 def setup():
-    if (PKI/'ca.crt').exists(): return
+    if (PKI/'ca.crt').exists():
+        if not (PKI/'ca.crl').exists():write_crl()
+        return
     create_ca(); create_ca('rogue-ca')
     issue('cloud', True)
     identities = {}
@@ -58,6 +72,7 @@ def setup():
     issue('intruso', ca_name='rogue-ca')
     save_json(PKI/'identities.json', identities)
     save_json(PKI/'revoked.json', [])
+    write_crl()
 
 def server_context(name):
     ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER); ctx.minimum_version = ssl.TLSVersion.TLSv1_2
@@ -81,6 +96,7 @@ def revoke(serial):
     values = read_json(PKI/'revoked.json', [])
     if serial not in values: values.append(serial)
     save_json(PKI/'revoked.json', values)
+    if (PKI/'ca.key').exists():write_crl()
     audit('pki','certificado_revogado', serial=serial)
 
 if __name__ == '__main__':

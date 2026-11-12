@@ -1,0 +1,15 @@
+{
+  "acquired_utc_host": "2026-11-12T06:18:07.424984+00:00",
+  "actor": "Coleta automatizada autorizada, revisão do autor RM552505",
+  "scope": "Aquisição lógica complementar de evidências do próprio laboratório Ubuntu/WSL2/Docker. Não é imagem de disco/memória.",
+  "source": "/home/caioba/GS2026-2-Cybersecurity-VilaAurora/evidence/docker e evidence/linux-regression",
+  "destination": "Repositório de entrega Windows, pasta evidence, preservando aquisição nativa anterior",
+  "clock_limit": "UTC do host sem confirmação absoluta; duração do caos medida por contador monotônico",
+  "phases": [
+    "Ensaio longo da versão-base",
+    "Revisão com CRL, processos UID1000 e visualizador",
+    "Retestes de rede/TLS/segurança e regressão curta com painel"
+  ],
+  "exclusions": "Sem CA privada, chaves WireGuard, credenciais, sementes TOTP ou bancos operacionais",
+  "previous_manifest_sha256": "9b4e8ba4625462a56763594025d2336d1c3b8e098566d7cc6915e17d38561b9b"
+}

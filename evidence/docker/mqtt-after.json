@@ -1,0 +1,19 @@
+{
+  "phase": "after",
+  "passed": true,
+  "tests": {
+    "revoked_old_serial": {
+      "connected": false,
+      "ack_code": null,
+      "error": null,
+      "accepted": false
+    },
+    "rotated_new_serial": {
+      "connected": true,
+      "ack_code": 16,
+      "error": null,
+      "accepted": true
+    }
+  },
+  "protocol": "MQTT 5, QoS1, Mosquitto real"
+}

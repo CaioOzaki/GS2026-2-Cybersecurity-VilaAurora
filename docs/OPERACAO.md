@@ -8,8 +8,8 @@
 | Tampering | Agendamento da bomba alterado por SQLi | Parâmetros, banco somente leitura, RBAC e aprovação | Sem hardware/PLC ligado |
 | Repudiation | Logs espalhados e sobrescritos | JSONL central, sequência, SHA-256 e custódia | NTP não sincronizado; host único pode reescrever cadeia |
 | Information disclosure | Tabela de usuários extraída | Separação de bancos e negação de leitura fora do histórico | Teste não equivale a auditoria completa da aplicação |
-| Denial of service | Fibra cai e alarme depende da nuvem | Regras locais e outbox durável; teste de serviço >=30 min | Sem UPS ou redundância física testada |
-| Elevation of privilege | Conta VPN abre acesso excessivo | Três segmentos e firewall preparados; permissões no painel | Linux/Docker e MFA administrativo ainda pendentes |
+| Denial of service | Fibra cai e alarme depende da nuvem | Regras locais e outbox durável; testes de serviço e de túnel virtual >=30 min | Sem UPS ou redundância física testada |
+| Elevation of privilege | Conta VPN abre acesso excessivo | Três segmentos e firewall testados no piloto; permissões no painel | Sem SSH/RDP remoto; MFA no painel; host Docker confiável |
 
 ## Modo degradado e redundância
 
@@ -39,7 +39,7 @@ Operação anual: hospedagem/backup R$60 x 12 = R$720; manutenção 2 h/mês x R
 - Técnico: revisão semanal de logs/filas; atualização mensal em homologação; backup diário e teste de restauração mensal; inventário de firmware e dependências; plano de retorno da versão anterior.
 - Coordenação: aprovar ações de alto impacto, controlar admissões/desligamentos e revisar custos mensalmente.
 - Auditor: revisão mensal de acessos e trilhas; conferência amostral dos hashes e restauração.
-- PKI: certificados válidos 90 dias, renovar antes de 60 dias; revogação imediata por comprometimento; CA offline separada na implantação profissional. Na versão de desenvolvimento a CA fica privada no mesmo host.
+- PKI: certificados válidos 90 dias, renovar antes de 60 dias; revogação imediata por comprometimento; CRL assinada válida sete dias, renovar semanalmente antes de vencer; reiniciar broker controladamente para recarregar e forçar reconexão. CA offline separada na implantação profissional. Na versão de desenvolvimento a CA fica privada no mesmo host.
 - Logs propostos: telemetria 30 dias, segurança 90 dias e backup criptografado 90 dias; retenção de incidente suspensa mediante decisão formal. Esses períodos são política projetada; não há rotina automática de expurgo/backup no protótipo.
 
 ## RIPD simplificado

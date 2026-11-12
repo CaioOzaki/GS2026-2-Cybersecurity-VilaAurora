@@ -1,0 +1,31 @@
+{
+  "phase": "before",
+  "passed": true,
+  "tests": {
+    "valid": {
+      "connected": true,
+      "ack_code": 16,
+      "error": null,
+      "accepted": true
+    },
+    "without_certificate": {
+      "connected": false,
+      "ack_code": null,
+      "error": null,
+      "accepted": false
+    },
+    "untrusted_CA": {
+      "connected": false,
+      "ack_code": null,
+      "error": null,
+      "accepted": false
+    },
+    "wrong_topic": {
+      "connected": true,
+      "ack_code": 135,
+      "error": null,
+      "accepted": false
+    }
+  },
+  "protocol": "MQTT 5, QoS1, Mosquitto real"
+}

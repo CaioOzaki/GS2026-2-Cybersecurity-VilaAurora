@@ -1,40 +1,19 @@
-# Instalar Docker no Windows e validar o piloto
+# Ubuntu/WSL2 e Docker - reprodução e gravação
 
-Esta etapa depende de instalação e possível reinicialização. Salve seus trabalhos antes. Não foi executada automaticamente.
+O piloto desta entrega foi executado no Ubuntu 24.04/WSL2 com Docker Desktop. A instalação é necessária apenas em outro computador; neste computador ela já foi concluída.
 
-1. Abra PowerShell **como administrador** e execute `wsl --install`. Reinicie se solicitado. Abra Ubuntu e conclua a criação de um usuário Linux. A senha não aparece enquanto você digita; não a compartilhe.
-2. No PowerShell, execute `wsl --update` e `wsl --list --verbose`. Confirme a distribuição na versão 2.
-3. Baixe Docker Desktop somente em https://docs.docker.com/desktop/setup/install/windows-install/ . Escolha o mecanismo WSL 2. Abra o Docker Desktop e aguarde o mecanismo ficar ativo. Em Settings > Resources > WSL Integration, habilite Ubuntu se essa opção estiver disponível.
-4. No terminal Ubuntu, confirme `docker version`, `docker compose version` e `docker run --rm hello-world`. Se aparecer erro de virtualização, verifique a virtualização de hardware/WSL conforme a documentação oficial; não altere BIOS sem entender o procedimento do fabricante.
-5. Clone o repositório no diretório pessoal do Ubuntu (melhor desempenho de disco que a pasta Windows):
+1. No PowerShell administrador: `wsl --install -d Ubuntu-24.04`. Reinicie se solicitado, abra o Ubuntu e crie usuário/senha. Não compartilhe a senha.
+2. Instale Docker Desktop pelo site oficial, use o mecanismo WSL2 e habilite Ubuntu em Settings > WSL integration. Confirme `docker version` no Ubuntu.
+3. Clone o repositório no diretório pessoal Linux. Instale Python/venv e siga a seção 4 do README. Não prepare as chaves com os containers em execução.
+4. `docker compose ps` deve mostrar cinco serviços em execução. `python3 docker/validate.py` gera nove verificações de fluxo e privilégios. O handshake está em `evidence/docker/wireguard.txt`; o HTTPS mTLS via túnel faz parte de `network.json`.
+5. O painel está em http://127.0.0.1:8088/ . Credenciais privadas: `.runtime/docker/edge/credentials.json`. Cadastre o TOTP em autenticador SHA-1, seis dígitos, 30 s. O código é de uso único. Faça login antes de gravar; não filme senha, semente ou QR.
+6. `python3 docker/chaos.py` realiza 1802 s reais de corte da interface WireGuard. Não execute outro teste ou reinício em paralelo. `chaos-progress.json` permite acompanhar a fila; `chaos-tunnel.json` só confirma o resultado final. O corte é de rede virtual, não de fibra física.
+7. Para demonstrar uma interrupção curta em vídeo, rode `python3 docker/short_regression.py` e atualize o painel. Ele desliga o túnel por 45 s, restaura e confere a reconciliação. Essa regressão não substitui o teste longo.
+8. No README estão os probes de Mosquitto: certificado válido, certificado ausente, CA estrangeira, tópico indevido, serial revogado e serial novo. O procedimento de rotação reinicia a borda e produz uma breve interrupção controlada.
+9. Antes de repetir coletas, preserve os arquivos de evidência da entrega. Para encerrar o laboratório: `docker compose down`. Nunca envie `.runtime/`, credenciais, chaves privadas ou bancos operacionais ao GitHub.
 
-```sh
-git clone https://github.com/CaioOzaki/GS2026-2-Cybersecurity-VilaAurora.git
-cd GS2026-2-Cybersecurity-VilaAurora
-sudo apt-get update
-sudo apt-get install -y python3-venv
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python docker/prepare.py
-docker compose config
-docker compose up --build -d
-docker compose ps
-sh docker/validate.sh
-```
+## Limites preservados no relatório
 
-Se `docker compose ps` mostrar serviço encerrado, pare aqui e veja `docker compose logs --tail=80`. Ainda não há comprovação de funcionamento neste ambiente. O script verifica túnel e tráfego autorizado/negado e salva saídas em `evidence/docker/`.
+O corte longo foi medido na versão-base; depois a revisão acrescentou CRL, processos sem root e visualizador, com regressão curta e repetição dos testes. São fases distintas. Sensores são geradores de telemetria, não hardware físico. Os cinco espaços foram exercitados logicamente na versão nativa; o piloto Linux é uma UBS. Não há SSH/RDP remoto nem MFA humano no protocolo WireGuard. A aplicação oferece MFA no painel. O painel HTTP está restrito ao laboratório/loopback; instalar HTTPS antes de disponibilizá-lo em ambiente distribuído. O relógio absoluto ainda requer verificação NTP e a energia física não foi medida.
 
-6. Confirme `latest handshake` recente no `wireguard.txt`. Em `tunnel-https.txt` deve haver 200; `segments.txt` deve indicar painel permitido ao operador e MQTT/painel proibidos às origens indevidas. Não confunda o endereço privado 10.77.0.1 com um endereço de Internet.
-7. Rode `sh docker/chaos-wan.sh` e mantenha por pelo menos 30 minutos. Observe no log da borda os alarmes e a fila. O script testa o corte do túnel virtual da UBS; não simula cinco links físicos nem perda de energia. Após retornar, compare leituras únicas na borda e na nuvem e confirme fila zero.
-8. Pare com `docker compose down`. Os bind-mounts preservam a fila e as credenciais locais. Nunca envie `.runtime/` ao repositório.
-
-Fontes: Docker Desktop Windows e backend WSL 2, https://docs.docker.com/desktop/features/wsl/ ; Microsoft, https://learn.microsoft.com/windows/wsl/install ; WireGuard, https://www.wireguard.com/quickstart/ . Consulte as versões atuais e requisitos do seu Windows.
-
-## Pendências após a instalação
-
-- Validar o piloto e corrigir eventuais incompatibilidades do kernel WireGuard/iptables.
-- Revisar identidades e revogação no Mosquitto (a lista de bloqueio Python não é automaticamente uma CRL Mosquitto).
-- Tornar os serviços sem privilégios após preparar a rede; root e NET_ADMIN estão restritos ao laboratório.
-- Sincronizar o relógio do host por NTP e repetir a coleta; containers herdam o relógio do host.
-- Capturar a comprovação real da VPN, segmentação e caos; atualizar o relatório.
-- Se administração remota for habilitada futuramente, implementar portal/ZTNA/bastion com MFA antes de expor acesso.
+Fontes oficiais: https://docs.docker.com/desktop/setup/install/windows-install/ ; https://docs.docker.com/desktop/features/wsl/ ; https://learn.microsoft.com/windows/wsl/install ; https://www.wireguard.com/quickstart/ ; https://mosquitto.org/man/mosquitto-conf-5.html .

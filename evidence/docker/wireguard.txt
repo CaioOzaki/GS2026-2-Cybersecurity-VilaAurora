@@ -1,0 +1,23 @@
+interface: wg0
+  public key: csnyB2i57bmAl6b7TyxmBKz6j8pQG1KQiW7Y0UB8s1I=
+  private key: (hidden)
+  listening port: 51820
+
+peer: PwkFgh7mTwqo7c43yYC5075H2OKxVVGX7NuC7KhNNF4=
+  endpoint: 172.29.0.2:51820
+  allowed ips: 10.77.0.1/32
+  latest handshake: 39 seconds ago
+  transfer: 47.36 KiB received, 35.70 KiB sent
+  persistent keepalive: every 15 seconds
+
+interface: wg0
+  public key: PwkFgh7mTwqo7c43yYC5075H2OKxVVGX7NuC7KhNNF4=
+  private key: (hidden)
+  listening port: 51820
+
+peer: csnyB2i57bmAl6b7TyxmBKz6j8pQG1KQiW7Y0UB8s1I=
+  endpoint: 172.29.0.3:51820
+  allowed ips: 10.77.0.2/32
+  latest handshake: 39 seconds ago
+  transfer: 158.78 KiB received, 210.45 KiB sent
+  persistent keepalive: every 15 seconds

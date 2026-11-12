@@ -1,0 +1,12 @@
+{
+  "phase": "Revisão final após CRL e visualizador; regressão curta separada do ensaio longo",
+  "utc_host": "2026-11-12T06:17:48.086565+00:00",
+  "image_ids": {
+    "edge": "sha256:23c0cda0790168fe08868de25867b0d7e5523260ac505a28e5047517e539b4bc",
+    "cloud": "sha256:d193f5cd0cea97b1e9012e69f5cfa895264a6fd535b59f598fd4b0ea0f619618",
+    "field": "sha256:919b7498b0037454431725082bc83d29b68db177cf71e019dc6d61fee392c8ee",
+    "operator": "sha256:4d7f1d698a0d93d474fe376ce3e4cebddfc57cea14a42791dbcc0035ba2d341d",
+    "admin": "sha256:735d9bfc4cb175f63526831c730c04a9652e6ed7f26773cb7a238908ccb5c466"
+  },
+  "packages": "gosu\t1.14-1+b10\niptables\t1.8.9-2\nmosquitto\t2.0.11-1.2+deb12u2\nwireguard-tools\t1.0.20210914-1+b1\n"
+}

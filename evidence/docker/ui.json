@@ -1,0 +1,80 @@
+{
+  "scope": "Teste de navegador real contra o piloto Linux em 127.0.0.1:8088; identidade auditor com senha e TOTP",
+  "login_passed": true,
+  "one_ubs": true,
+  "observations": [
+    {
+      "file": "dashboard-online.png",
+      "scope": "Piloto UBS Linux | Mosquitto | VPN ligada",
+      "tunnel_up": true,
+      "edges": [
+        {
+          "site": "ubs",
+          "readings": 1588,
+          "pending": 0,
+          "last": {
+            "temperatura": 5,
+            "nivel": 60,
+            "energia": 75,
+            "acesso": 0
+          },
+          "alerts": 1,
+          "bytes_mqtt_payload": 2278,
+          "bytes_https_payload": 7129,
+          "sync_batches_ok": 13,
+          "sync_errors": 0
+        }
+      ],
+      "utc_host": "2026-11-12T06:16:52.046+00:00"
+    },
+    {
+      "file": "dashboard-offline.png",
+      "scope": "Piloto UBS Linux | Mosquitto | VPN desligada: operação local",
+      "tunnel_up": false,
+      "edges": [
+        {
+          "site": "ubs",
+          "readings": 1602,
+          "pending": 6,
+          "last": {
+            "temperatura": 5,
+            "nivel": 60,
+            "energia": 75,
+            "acesso": 0
+          },
+          "alerts": 1,
+          "bytes_mqtt_payload": 3004,
+          "bytes_https_payload": 8425,
+          "sync_batches_ok": 16,
+          "sync_errors": 3
+        }
+      ],
+      "utc_host": "2026-11-12T06:17:12.712+00:00"
+    },
+    {
+      "file": "dashboard-recovered.png",
+      "scope": "Piloto UBS Linux | Mosquitto | VPN ligada",
+      "tunnel_up": true,
+      "edges": [
+        {
+          "site": "ubs",
+          "readings": 1632,
+          "pending": 0,
+          "last": {
+            "temperatura": 5,
+            "nivel": 60,
+            "energia": 75,
+            "acesso": 0
+          },
+          "alerts": 2,
+          "bytes_mqtt_payload": 4556,
+          "bytes_https_payload": 14258,
+          "sync_batches_ok": 17,
+          "sync_errors": 22
+        }
+      ],
+      "utc_host": "2026-11-12T06:17:53.481+00:00"
+    }
+  ],
+  "passed": true
+}

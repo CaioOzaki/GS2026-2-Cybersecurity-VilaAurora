@@ -1,5 +1,5 @@
 """Execução somente no laboratório local. Não aceita URL de terceiros."""
-import hashlib,json,os,sqlite3,subprocess,sys,time,urllib.request,urllib.error,urllib.parse
+import hashlib,json,os,sqlite3,subprocess,sys,time,urllib.request,urllib.error,urllib.parse,platform
 from pathlib import Path
 from aurora.common import ROOT,RUNTIME,save_json,read_json,audit,utc
 from aurora.pki import setup,PKI,client_context,revoke,issue
@@ -117,7 +117,7 @@ def main():
         check('SOAR isola certificado após violação da ACL',temp_serial in revoked,{'identity':'escola-temperatura','revoked':temp_serial in revoked})
         save_json(ROOT/'evidence/detections.json',alerts)
         # Salva somente dados de teste públicos, sem cookies, senhas ou sementes TOTP.
-        result=dict(scope='Testes próprios loopback Windows. Não validam VPN/segmentação Linux.',utc=utc(),
+        result=dict(scope='Testes próprios loopback '+platform.system()+'. Não validam VPN/segmentação.',platform=platform.platform(),utc=utc(),
             passed=sum(r['passed'] for r in RESULT),total=len(RESULT),tests=RESULT)
         save_json(ROOT/'evidence/security.json',result)
         print(json.dumps({'passed':result['passed'],'total':result['total']}),flush=True)
