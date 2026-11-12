@@ -1,0 +1,15 @@
+.runtime/
+.venv/
+__pycache__/
+*.pyc
+*.key
+*.pem
+*.p12
+*.pfx
+*.env
+!*.env.example
+credentials.json
+*.db
+*.db-wal
+*.db-shm
+*.joblib
