@@ -1,4 +1,5 @@
 .runtime/
+.runtime*/
 .venv/
 __pycache__/
 *.pyc
@@ -7,6 +8,7 @@ __pycache__/
 *.p12
 *.pfx
 *.env
+.env*
 !*.env.example
 credentials.json
 *.db

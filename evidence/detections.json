@@ -1,0 +1,83 @@
+[
+  {
+    "rule": "D03",
+    "title": "Falha de autenticação mTLS",
+    "event": "bd2c854f0b4f320abe7cf403c541a72926b569ba000695e0b9d0e52f8a165550",
+    "source_utc": "2026-11-12T01:30:25.905+00:00",
+    "detected_utc": "2026-11-12T01:30:26.146+00:00",
+    "mttd_seconds": 0.241,
+    "origin": "local_test"
+  },
+  {
+    "rule": "D03",
+    "title": "Falha de autenticação mTLS",
+    "event": "7bdf6354038f5c49152d206a2db7335775d78b19f40efee221218c4acf483588",
+    "source_utc": "2026-11-12T01:30:25.914+00:00",
+    "detected_utc": "2026-11-12T01:30:26.155+00:00",
+    "mttd_seconds": 0.241,
+    "origin": "local_test"
+  },
+  {
+    "rule": "D02",
+    "title": "Padrão de SQL Injection no laboratório",
+    "event": "c56c6c694f609a30f8b8c5c4c8d7dacb559757e5b0448148fdbc89be41bad53c",
+    "source_utc": "2026-11-12T01:30:32.669+00:00",
+    "detected_utc": "2026-11-12T01:30:32.777+00:00",
+    "mttd_seconds": 0.108,
+    "origin": "local_test"
+  },
+  {
+    "rule": "D02",
+    "title": "Padrão de SQL Injection no laboratório",
+    "event": "0559b5c774976563bb921e3b92aef9884899376642dbb3c232382fa27524c05d",
+    "source_utc": "2026-11-12T01:30:32.687+00:00",
+    "detected_utc": "2026-11-12T01:30:32.785+00:00",
+    "mttd_seconds": 0.098,
+    "origin": "local_test"
+  },
+  {
+    "rule": "D02",
+    "title": "Padrão de SQL Injection no laboratório",
+    "event": "8e3ce3f776da00dd543a903b6e61c1d763a99188d548d788c663c9c5d5ef491f",
+    "source_utc": "2026-11-12T01:30:32.704+00:00",
+    "detected_utc": "2026-11-12T01:30:32.793+00:00",
+    "mttd_seconds": 0.089,
+    "origin": "local_test"
+  },
+  {
+    "rule": "D02",
+    "title": "Padrão de SQL Injection no laboratório",
+    "event": "a7b9dda34d50a11c8fafabe90ddfe56a55aad533e9e007a68aa530083a8759b4",
+    "source_utc": "2026-11-12T01:30:32.723+00:00",
+    "detected_utc": "2026-11-12T01:30:32.801+00:00",
+    "mttd_seconds": 0.078,
+    "origin": "local_test"
+  },
+  {
+    "rule": "D04",
+    "title": "Comando de atuador fora do perfil",
+    "event": "c7b5684324c856c06ecf86af658f6c184a0e2efdc99cf470db01c30f147c8917",
+    "source_utc": "2026-11-12T01:30:34.249+00:00",
+    "detected_utc": "2026-11-12T01:30:34.404+00:00",
+    "mttd_seconds": 0.155,
+    "origin": "local_test"
+  },
+  {
+    "rule": "D04",
+    "title": "Comando de atuador fora do perfil",
+    "event": "5fd783dc35d2515ea3a7853d5dc087298016766fb7576f6de5fe2927753141d3",
+    "source_utc": "2026-11-12T01:30:34.274+00:00",
+    "detected_utc": "2026-11-12T01:30:34.411+00:00",
+    "mttd_seconds": 0.137,
+    "origin": "local_test"
+  },
+  {
+    "rule": "D01",
+    "title": "Login VPN fora do perfil - evento sintético",
+    "event": "e5dfb9d0a4ec68beb18cf08667d5d268432850960f9ba7dae931a0c59f4702ee",
+    "source_utc": "2026-11-12T01:30:34.302+00:00",
+    "detected_utc": "2026-11-12T01:30:34.419+00:00",
+    "mttd_seconds": 0.117,
+    "origin": "synthetic_replay"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "continuity-events.jsonl": {
+    "valid": true,
+    "rows": 3560,
+    "terminal_hash": "d45f09adc4474549d6ddefb28ea8a2695bcd81d80082634b1cde3a5c4d4a821b"
+  },
+  "security-events.jsonl": {
+    "valid": true,
+    "rows": 45,
+    "terminal_hash": "97463a5fb662af8c7a5b4903d8c692ceabe724c1f140dd97d35c7d4f850d043c"
+  }
+}

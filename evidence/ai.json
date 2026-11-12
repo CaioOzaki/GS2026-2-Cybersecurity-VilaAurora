@@ -1,0 +1,26 @@
+{
+  "algorithm": "IsolationForest",
+  "training_normal": 1200,
+  "test_normal": 300,
+  "test_anomaly": 60,
+  "seeds": [
+    552505,
+    552506
+  ],
+  "features": [
+    "temperatura_C",
+    "nivel_percent",
+    "energia_percent"
+  ],
+  "threshold": "contamination=0.03 definido antes do conjunto de teste",
+  "precision": 0.8636363636363636,
+  "recall": 0.6333333333333333,
+  "false_positive_rate": 0.02,
+  "true_negative": 294,
+  "false_positive": 6,
+  "false_negative": 22,
+  "true_positive": 38,
+  "limitation": "Dados sintéticos independentes. Não demonstram desempenho em campo nem resistência a adversários.",
+  "actuation": false,
+  "llm": false
+}

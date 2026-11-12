@@ -1,0 +1,89 @@
+name: vila-aurora-lab
+services:
+  cloud:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    cap_add: [NET_ADMIN]
+    environment:
+      ROLE: cloud
+      AURORA_RUNTIME: /state
+      AURORA_BIND: 0.0.0.0
+    volumes:
+      - ./.runtime/docker/cloud:/state
+    networks:
+      wan:
+        ipv4_address: 172.29.0.2
+  edge:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    cap_add: [NET_ADMIN]
+    depends_on: [cloud]
+    environment:
+      ROLE: edge
+      AURORA_RUNTIME: /state
+      AURORA_CLOUD: https://cloud:9443/ingest
+    extra_hosts:
+      - cloud:10.77.0.1
+    volumes:
+      - ./.runtime/docker/edge:/state
+    networks:
+      wan:
+        ipv4_address: 172.29.0.3
+      iot:
+        ipv4_address: 172.29.10.2
+      operators:
+        ipv4_address: 172.29.20.2
+      management:
+        ipv4_address: 172.29.30.2
+  field:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    environment:
+      ROLE: field
+      AURORA_RUNTIME: /state
+    depends_on: [edge]
+    extra_hosts:
+      - broker-ubs:172.29.10.2
+    volumes:
+      - ./.runtime/docker/field:/state
+    networks:
+      iot:
+        ipv4_address: 172.29.10.10
+  operator:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    environment: {ROLE: observer}
+    networks:
+      operators:
+        ipv4_address: 172.29.20.10
+  admin:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    environment: {ROLE: observer}
+    networks:
+      management:
+        ipv4_address: 172.29.30.10
+networks:
+  wan:
+    internal: true
+    ipam:
+      config: [{subnet: 172.29.0.0/24}]
+  iot:
+    internal: true
+    ipam:
+      config: [{subnet: 172.29.10.0/24}]
+  operators:
+    internal: true
+    ipam:
+      config: [{subnet: 172.29.20.0/24}]
+  management:
+    internal: true
+    ipam:
+      config: [{subnet: 172.29.30.0/24}]
+# Sem ports: nenhum serviço é publicado na Internet ou no host.
+# Piloto Linux de uma UBS. Replicar por local após validar o piloto.

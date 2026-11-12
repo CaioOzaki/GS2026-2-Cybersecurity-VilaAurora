@@ -1,0 +1,12 @@
+{
+  "domain": "vila-aurora.test",
+  "spf": "v=spf1 ip4:192.0.2.25 -all",
+  "dkim_selector": "lab2026",
+  "dkim_txt": "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUb9NM96lX0kfpMMLlPxhFzqFmCMZtr2yOPPgaD24FURlFJ/hgVcYKzdEejylSTW3iDDGkbwyK5R39RgkR7p/2ysP43cKi9dPx35DJeeTZ+hxa3NNblvA8+Dq/1VaV1ERRkjTgaMAGkkEKkplpMSyz2Q6biHeWHVlOL9sKrAXJMM0t9qJ9VMTk9DGfCrOCOkRmWfdNSc7CB5gH8yBwtPFwhpRugQ1+urZFBMAfNxBpWTxkOx6UIHnHEmlOFIsUp/fFb/l34FqV0NONq4VILGmSH5ei+dJQFuN1hwbcYo9+TbaoqsdWjF60VwKKDWvI0HeSsdUt0C6GlCl9/JYObz6QIDAQAB",
+  "dmarc": "v=DMARC1; p=quarantine; adkim=s; aspf=s; pct=100",
+  "dkim_signature_valid": true,
+  "tampered_message_valid": false,
+  "dns_publication": "Zona de laboratório offline; .test não é domínio público.",
+  "spf_check_scope": "Registro documentado; sem avaliador SPF completo ou entrega de e-mail.",
+  "dmarc_check_scope": "Política e alinhamento especificados; sem receptor SMTP/relatórios DMARC reais."
+}

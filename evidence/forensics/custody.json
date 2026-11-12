@@ -1,0 +1,29 @@
+{
+  "case": "INC-VA-0712-LAB-RM552505",
+  "custodian": "Responsável acadêmico RM552505",
+  "acquisition_by": "Script de cópia e cálculo SHA-256, executado pelo assistente sob autorização do autor",
+  "acquired_utc_host": "2026-11-12T04:51:51.723+00:00",
+  "clock_limitation": "NTP não sincronizado; host clock, ordem por monotonic_ns",
+  "steps": [
+    {
+      "step": 1,
+      "action": "Copiar logs de teste fechados e resultados públicos para pasta de evidências",
+      "time": "2026-11-12T04:51:51.723+00:00"
+    },
+    {
+      "step": 2,
+      "action": "Calcular SHA-256 individual e verificar cadeias JSONL",
+      "time": "2026-11-12T04:51:51.823+00:00"
+    },
+    {
+      "step": 3,
+      "action": "Preparar versão pública sem chaves, credenciais ou bancos operacionais",
+      "time": "2026-11-12T04:51:51.823+00:00"
+    }
+  ],
+  "limitations": [
+    "Não houve transferência a terceiro no momento desta aquisição.",
+    "Não é laudo pericial oficial nem comprovação do incidente histórico fictício.",
+    "Hash não prova autoria; manter uma cópia externa do manifesto e da entrega."
+  ]
+}

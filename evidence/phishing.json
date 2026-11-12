@@ -1,0 +1,18 @@
+{
+  "accounts": 5,
+  "campaign_mode": "Agentes HTTP fictícios; sem envio SMTP ou participação humana.",
+  "counts": {
+    "abertura": 4,
+    "clique": 3,
+    "submissao": 2,
+    "reporte": 2
+  },
+  "rates_percent": {
+    "abertura": 80.0,
+    "clique": 60.0,
+    "submissao": 40.0,
+    "reporte": 40.0
+  },
+  "passwords_collected": 0,
+  "limitation": "Valida instrumentação; não mede conscientização de voluntários reais."
+}

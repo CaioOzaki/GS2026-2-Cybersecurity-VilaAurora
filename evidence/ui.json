@@ -1,0 +1,9 @@
+{
+  "login": "Conectado como operador",
+  "cards": 5,
+  "links": 6,
+  "labels": 4,
+  "lang": "pt-BR",
+  "keyboard_first_focus": "Pular para o conteúdo",
+  "scope": "Chromium headless, login real e cinco estados lidos do teste em execução. Captura com resumo dos resultados reais; não certifica WCAG completa."
+}

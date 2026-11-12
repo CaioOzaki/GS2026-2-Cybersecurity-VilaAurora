@@ -1,0 +1,10 @@
+.git
+.runtime*
+.venv
+__pycache__
+**/__pycache__
+*.key
+*.pem
+*.db
+*.db-wal
+*.db-shm

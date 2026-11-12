@@ -1,0 +1,7 @@
+{
+  "scope": "Bancos SQLite descartáveis após a reprodução local",
+  "legacy_schedule_hour": 2,
+  "safe_schedule_hour": 8,
+  "origin": "Consultas reais registradas no teste de segurança",
+  "personal_data": "somente fictícios: p001-p003 e voluntario001/002"
+}

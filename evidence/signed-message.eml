@@ -1,0 +1,14 @@
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=vila-aurora.test;
+ i=@vila-aurora.test; q=dns/txt; s=lab2026; t=1794446893; h=from : to :
+ subject : date; bh=Dv/SgZ+XBcpD6HJQIvL+2iFdc2nuSJPdZX1KYkg7xA8=;
+ b=SqEFjw28is8YeWUUBv38sKjCqgSocwffE4BEEtxqqvJ2GsjMdWC937B1LTDWqlGBJKumm
+ VmayfPHcCJIB8ieyy/0YnCTzEHVhXvq/qVozv/ELEKHNeA6BTTNDnsnWoLoOyR6FZlgD3cV
+ zDKXSgSzIovdRjHsUlGtBBA7A1rzhomwRYSNI7R4dJ4a18RWnWkCIYYWRwwHcua9O28S7fq
+ UTGU/HRPhd3aTuJedzYVwlfUb/YQ9HlhKiw0hH0CrwSjcO+EpHhGtkVXTh+4N0UAC4ikRbO
+ XilQaSoyFesQ95xa8mXIgt62vqAOejb3Vqe4GQL87RMt2jw3H2MbkJMxiPew==
+From: coordenacao@vila-aurora.test
+To: voluntario001@example.test
+Subject: [LABORATORIO] Teste de assinatura
+Date: Wed, 11 Nov 2026 12:00:00 +0000
+
+Conteudo sintetico do laboratorio Vila Aurora.

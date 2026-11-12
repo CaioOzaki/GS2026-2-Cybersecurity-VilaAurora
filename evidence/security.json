@@ -1,0 +1,286 @@
+{
+  "scope": "Testes próprios loopback Windows. Não validam VPN/segmentação Linux.",
+  "utc": "2026-11-12T01:30:35.108+00:00",
+  "passed": 25,
+  "total": 25,
+  "tests": [
+    {
+      "test": "MQTT mTLS com identidade própria",
+      "passed": true,
+      "details": {
+        "site": "escola",
+        "readings": 1,
+        "pending": 1,
+        "last": {
+          "temperatura": 12.0,
+          "acesso": 0.0,
+          "nivel": 62.0
+        },
+        "alerts": 1,
+        "bytes_mqtt_payload": 68,
+        "bytes_https_payload": 0,
+        "sync_batches_ok": 0,
+        "sync_errors": 0
+      },
+      "utc": "2026-11-12T01:30:25.856+00:00"
+    },
+    {
+      "test": "Alarme local sem decisão da nuvem",
+      "passed": true,
+      "details": {
+        "alarm_count": 1
+      },
+      "utc": "2026-11-12T01:30:25.856+00:00"
+    },
+    {
+      "test": "Sem certificado",
+      "passed": true,
+      "details": {
+        "denied": true,
+        "readings_unchanged": true
+      },
+      "utc": "2026-11-12T01:30:25.897+00:00"
+    },
+    {
+      "test": "CA não confiável",
+      "passed": true,
+      "details": {
+        "denied": true,
+        "readings_unchanged": true
+      },
+      "utc": "2026-11-12T01:30:25.902+00:00"
+    },
+    {
+      "test": "ACL: certificado não publica por outro sensor",
+      "passed": true,
+      "details": {
+        "denied": true,
+        "readings_unchanged": true
+      },
+      "utc": "2026-11-12T01:30:25.922+00:00"
+    },
+    {
+      "test": "Revogação e rotação X.509",
+      "passed": true,
+      "details": {
+        "old_serial": "5aeebdb2c4326498836e064d085e828af827a58c",
+        "new_serial": "29c6eec359bc4cfc46f2742445e1ab9fd2ca6c17",
+        "old_blocked": true
+      },
+      "utc": "2026-11-12T01:30:26.110+00:00"
+    },
+    {
+      "test": "Cliente independente Paho MQTT QoS1",
+      "passed": true,
+      "details": {
+        "puback_received": true
+      },
+      "utc": "2026-11-12T01:30:28.576+00:00"
+    },
+    {
+      "test": "Sincronização HTTPS mTLS",
+      "passed": true,
+      "details": {
+        "local": 4,
+        "cloud": 4
+      },
+      "utc": "2026-11-12T01:30:30.593+00:00"
+    },
+    {
+      "test": "Reconciliação idempotente UUID",
+      "passed": true,
+      "details": {
+        "before": 4,
+        "after_duplicate": 4
+      },
+      "utc": "2026-11-12T01:30:32.648+00:00"
+    },
+    {
+      "test": "SQLi antes/depois - tautologia",
+      "passed": true,
+      "details": {
+        "payload": "' OR 1=1 --",
+        "vulnerable": {
+          "rows": [
+            [
+              1,
+              "p001",
+              "entrada"
+            ],
+            [
+              2,
+              "p002",
+              "saída"
+            ],
+            [
+              3,
+              "p003",
+              "entrada"
+            ]
+          ]
+        },
+        "fixed": {
+          "rows": []
+        }
+      },
+      "utc": "2026-11-12T01:30:32.697+00:00"
+    },
+    {
+      "test": "SQLi antes/depois - extração sintética",
+      "passed": true,
+      "details": {
+        "vulnerable": {
+          "rows": [
+            [
+              1,
+              "voluntario001",
+              "operador"
+            ],
+            [
+              2,
+              "voluntario002",
+              "tecnico"
+            ]
+          ]
+        },
+        "fixed": {
+          "rows": []
+        }
+      },
+      "utc": "2026-11-12T01:30:32.733+00:00"
+    },
+    {
+      "test": "Reprodução do agendamento alterado",
+      "passed": true,
+      "details": {
+        "legacy_hour": 2,
+        "safe_hour": 8,
+        "scope": "Somente bancos descartáveis locais; sem bomba real."
+      },
+      "utc": "2026-11-12T01:30:32.751+00:00"
+    },
+    {
+      "test": "Validação e erro genérico",
+      "passed": true,
+      "details": {
+        "status": 400,
+        "body": {
+          "error": "Consulta inválida."
+        }
+      },
+      "utc": "2026-11-12T01:30:32.752+00:00"
+    },
+    {
+      "test": "Senha sem segundo fator recusada",
+      "passed": true,
+      "details": {
+        "status": 401
+      },
+      "utc": "2026-11-12T01:30:33.008+00:00"
+    },
+    {
+      "test": "MFA operador",
+      "passed": true,
+      "details": {
+        "status": 200,
+        "role": "operador"
+      },
+      "utc": "2026-11-12T01:30:33.255+00:00"
+    },
+    {
+      "test": "TOTP não reutilizável",
+      "passed": true,
+      "details": {
+        "status": 401
+      },
+      "utc": "2026-11-12T01:30:33.503+00:00"
+    },
+    {
+      "test": "MFA tecnico",
+      "passed": true,
+      "details": {
+        "status": 200,
+        "role": "tecnico"
+      },
+      "utc": "2026-11-12T01:30:33.748+00:00"
+    },
+    {
+      "test": "MFA coordenacao",
+      "passed": true,
+      "details": {
+        "status": 200,
+        "role": "coordenacao"
+      },
+      "utc": "2026-11-12T01:30:33.997+00:00"
+    },
+    {
+      "test": "MFA auditor",
+      "passed": true,
+      "details": {
+        "status": 200,
+        "role": "auditor"
+      },
+      "utc": "2026-11-12T01:30:34.239+00:00"
+    },
+    {
+      "test": "Painel restrito sem autenticação",
+      "passed": true,
+      "details": {
+        "status": 401
+      },
+      "utc": "2026-11-12T01:30:34.240+00:00"
+    },
+    {
+      "test": "Proteção CSRF",
+      "passed": true,
+      "details": {
+        "status": 403
+      },
+      "utc": "2026-11-12T01:30:34.241+00:00"
+    },
+    {
+      "test": "RBAC auditor não comanda",
+      "passed": true,
+      "details": {
+        "status": 403
+      },
+      "utc": "2026-11-12T01:30:34.250+00:00"
+    },
+    {
+      "test": "Ação crítica exige coordenação",
+      "passed": true,
+      "details": {
+        "pending_status": 202,
+        "operator_approval": 403,
+        "coordination_approval": 200,
+        "pump_before_approval": true,
+        "pump_after_approval": false,
+        "approval_test": "Requisições automatizadas testam permissões; na operação a coordenação decide no painel."
+      },
+      "utc": "2026-11-12T01:30:34.294+00:00"
+    },
+    {
+      "test": "Quatro regras SIEM",
+      "passed": true,
+      "details": {
+        "rules": [
+          "D01",
+          "D02",
+          "D03",
+          "D04"
+        ],
+        "VPN": "Evento sintético, sem túnel VPN nesta execução."
+      },
+      "utc": "2026-11-12T01:30:35.107+00:00"
+    },
+    {
+      "test": "SOAR isola certificado após violação da ACL",
+      "passed": true,
+      "details": {
+        "identity": "escola-temperatura",
+        "revoked": true
+      },
+      "utc": "2026-11-12T01:30:35.107+00:00"
+    }
+  ]
+}

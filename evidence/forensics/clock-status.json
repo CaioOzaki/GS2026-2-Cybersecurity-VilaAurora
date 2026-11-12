@@ -1,0 +1,9 @@
+{
+  "checked_utc_host": "2026-11-12T04:51:51.721+00:00",
+  "source": "w32tm /query /status (consulta somente leitura)",
+  "leap_indicator": 3,
+  "stratum": 0,
+  "source_clock": "Local CMOS Clock",
+  "last_successful_sync": null,
+  "conclusion": "Host sem NTP sincronizado; UTC absoluto incerto. Durações medidas por time.monotonic; não atribuir ao incidente original datas destes testes."
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "utc_host": "2026-11-12T01:30:26.183+00:00",
+    "monotonic_ns": 11024906000000,
+    "component": "soar",
+    "event": "isolamento_logico_sensor",
+    "origin": "local_execution",
+    "sha256": "09d5eea276753c69ee58ccb693529c8ecca308347e966b77ee6693783b46a0c0"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:32.669+00:00",
+    "monotonic_ns": 11031390000000,
+    "component": "web",
+    "event": "sqli_detectada",
+    "origin": "local_execution",
+    "sha256": "c56c6c694f609a30f8b8c5c4c8d7dacb559757e5b0448148fdbc89be41bad53c"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:32.687+00:00",
+    "monotonic_ns": 11031406000000,
+    "component": "web",
+    "event": "sqli_detectada",
+    "origin": "local_execution",
+    "sha256": "0559b5c774976563bb921e3b92aef9884899376642dbb3c232382fa27524c05d"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:32.704+00:00",
+    "monotonic_ns": 11031421000000,
+    "component": "web",
+    "event": "sqli_detectada",
+    "origin": "local_execution",
+    "sha256": "8e3ce3f776da00dd543a903b6e61c1d763a99188d548d788c663c9c5d5ef491f"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:32.723+00:00",
+    "monotonic_ns": 11031437000000,
+    "component": "web",
+    "event": "sqli_detectada",
+    "origin": "local_execution",
+    "sha256": "a7b9dda34d50a11c8fafabe90ddfe56a55aad533e9e007a68aa530083a8759b4"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:32.748+00:00",
+    "monotonic_ns": 11031468000000,
+    "component": "database",
+    "event": "agendamento_alterado_lab",
+    "origin": "local_execution",
+    "sha256": "a9231d14a484f0ca3d66ddb4a522473010d15249f4a8518fc9335b0c5f18cb0e"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:33.254+00:00",
+    "monotonic_ns": 11031968000000,
+    "component": "web",
+    "event": "login_mfa_aceito",
+    "origin": "local_execution",
+    "sha256": "c48e384c0a5ee76039989f457ef478b0e1d9bb9b59570f8d082d8465f89cb616"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:33.746+00:00",
+    "monotonic_ns": 11032468000000,
+    "component": "web",
+    "event": "login_mfa_aceito",
+    "origin": "local_execution",
+    "sha256": "b04884c63b55b1454e5c8c1f593cdca7575a70d16b36c21e5866877c3f57d43d"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:33.995+00:00",
+    "monotonic_ns": 11032718000000,
+    "component": "web",
+    "event": "login_mfa_aceito",
+    "origin": "local_execution",
+    "sha256": "e78cb1e8c43f7c3b6484238afb566112534b79880a82dd3d253b0e55b24ce3e8"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:34.238+00:00",
+    "monotonic_ns": 11032953000000,
+    "component": "web",
+    "event": "login_mfa_aceito",
+    "origin": "local_execution",
+    "sha256": "04e1859422ad914c02bc65300846b15beafb06be982c720b219b3e3e525f0b42"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:34.249+00:00",
+    "monotonic_ns": 11032968000000,
+    "component": "web",
+    "event": "atuador_negado",
+    "origin": "local_execution",
+    "sha256": "c7b5684324c856c06ecf86af658f6c184a0e2efdc99cf470db01c30f147c8917"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:34.274+00:00",
+    "monotonic_ns": 11033000000000,
+    "component": "web",
+    "event": "atuador_negado",
+    "origin": "local_execution",
+    "sha256": "5fd783dc35d2515ea3a7853d5dc087298016766fb7576f6de5fe2927753141d3"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:34.289+00:00",
+    "monotonic_ns": 11033015000000,
+    "component": "web",
+    "event": "atuador_aprovado",
+    "origin": "local_execution",
+    "sha256": "3e6718fb976a648f565d41e19c2f6e9ad8d34b316d438dc94e7dbaff001f5d62"
+  },
+  {
+    "utc_host": "2026-11-12T01:30:34.302+00:00",
+    "monotonic_ns": 11033015000000,
+    "component": "vpn",
+    "event": "replay_vpn_login",
+    "origin": "synthetic_replay",
+    "sha256": "e5dfb9d0a4ec68beb18cf08667d5d268432850960f9ba7dae931a0c59f4702ee"
+  }
+]
