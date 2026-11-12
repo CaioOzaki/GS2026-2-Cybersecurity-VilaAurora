@@ -3,6 +3,12 @@
 **GS 2026.2 | Cybersecurity | FIAP | 4ECA | RM552505**  
 Caio Yudi Ozaki Godinho. Trabalho individual. Somente dados sintéticos.
 
+## Apresentação final publicada
+
+- Vídeo no YouTube: https://youtu.be/NxUQMSvv-xU
+- Relatório final: [E1, E3 e E4](docs/GS2026.2_4ECA_RM552505_E1-E3-E4.pdf).
+- Links de entrega: [protótipo e vídeo](docs/GS2026.2_4ECA_RM552505_E2-VIDEO.pdf).
+
 ## Estado verificável
 
 - **25/25 testes locais aprovados**: mTLS MQTT/HTTPS, certificado ausente/CA inválida, ACL, rotação e revogação; cliente Paho QoS1; SQL Injection antes/depois; quatro perfis MFA; CSRF; aprovação de comando crítico; correlacionador e isolamento lógico automático.

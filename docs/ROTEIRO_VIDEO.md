@@ -1,5 +1,7 @@
 # Roteiro da demonstração - laboratório validado
 
+Vídeo final publicado pelo autor: https://youtu.be/NxUQMSvv-xU
+
 **Duração sugerida: 4min50s.** O enunciado não fixa duração; confirmar com o professor. Este roteiro acompanha as evidências reais e não substitui o vídeo. Não mostrar senhas, sementes TOTP, QR ou chaves privadas.
 
 ## Preparação
@@ -58,4 +60,4 @@ Se perguntarem sobre hardware, explicar: “O enunciado permite um laboratório 
 
 Se citar energia, dizer: “Para dimensionamento, usamos um cenário sintético de 15 W por borda, equivalente a aproximadamente 7,51 Wh durante o intervalo de 30 minutos. Essa é uma estimativa calculada, não uma medição elétrica.” CPU, memória, filas e perdas apresentados no vídeo continuam sendo as medições reais registradas.
 
-Os testes adicionais de e-mail e acessibilidade passaram 9/9 cada. Evitar afirmar conformidade integral WCAG ou DNS publicado na Internet. O horário do Windows continua sendo uma pendência administrativa, já registrada no relatório.
+Os testes adicionais de e-mail e acessibilidade passaram 9/9 cada. Evitar afirmar conformidade integral WCAG ou DNS publicado na Internet. O serviço de horário do Windows foi iniciado após autorização administrativa, mas o sincronismo NTP não foi confirmado; essa limitação permanece registrada no relatório.
