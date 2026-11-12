@@ -1,0 +1,116 @@
+{
+  "scope": "Verificações selecionadas de WCAG 2.1 AA em navegador real; não certifica toda a norma nem substitui teste com leitor de tela e usuários.",
+  "browser": "157.0.4341.46",
+  "utc_host": "2026-11-12T19:28:35.881Z",
+  "tests": [
+    {
+      "test": "Idioma português e título identificável",
+      "passed": true
+    },
+    {
+      "test": "Rótulos nativos dos três campos",
+      "passed": true
+    },
+    {
+      "test": "Link de salto alcançável por Tab e ativa conteúdo",
+      "passed": true
+    },
+    {
+      "test": "Foco visível por teclado",
+      "outline": "solid",
+      "width": "4px",
+      "passed": true
+    },
+    {
+      "test": "Login MFA concluído somente com teclado",
+      "visited": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "username",
+        "password",
+        "otp",
+        "BUTTON"
+      ],
+      "passed": true
+    },
+    {
+      "test": "Contraste mínimo 4,5:1 nos seis pares selecionados",
+      "contrast": [
+        {
+          "label": "Texto principal",
+          "foreground": "rgb(242, 246, 251)",
+          "background": "rgb(16, 28, 41)",
+          "ratio": 15.86
+        },
+        {
+          "label": "Texto secundário",
+          "foreground": "rgb(193, 211, 225)",
+          "background": "rgb(16, 28, 41)",
+          "ratio": 11.21
+        },
+        {
+          "label": "Link",
+          "foreground": "rgb(143, 230, 218)",
+          "background": "rgb(16, 28, 41)",
+          "ratio": 11.88
+        },
+        {
+          "label": "Texto de seção",
+          "foreground": "rgb(242, 246, 251)",
+          "background": "rgb(29, 48, 67)",
+          "ratio": 12.44
+        },
+        {
+          "label": "Texto do botão",
+          "foreground": "rgb(16, 33, 37)",
+          "background": "rgb(150, 242, 221)",
+          "ratio": 12.67
+        },
+        {
+          "label": "Texto do cartão",
+          "foreground": "rgb(242, 246, 251)",
+          "background": "rgb(38, 62, 84)",
+          "ratio": 10.19
+        }
+      ],
+      "passed": true
+    },
+    {
+      "test": "Refluxo a 320 CSS px sem rolagem horizontal",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "passed": true
+    },
+    {
+      "test": "Ampliação CSS 200% sem rolagem horizontal",
+      "scrollWidth": 1280,
+      "clientWidth": 1280,
+      "passed": true
+    },
+    {
+      "test": "Mensagens de estado com anúncio acessível",
+      "statuses": [
+        {
+          "id": "authstate",
+          "role": "status",
+          "live": null
+        },
+        {
+          "id": "totals",
+          "role": null,
+          "live": "polite"
+        },
+        {
+          "id": "commandstate",
+          "role": "status",
+          "live": null
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": 9,
+  "total": 9
+}

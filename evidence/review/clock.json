@@ -1,0 +1,30 @@
+{
+  "utc_host": "2026-11-12T19:18:03.508402+00:00",
+  "scope": "Revisão complementar; não altera timestamps das aquisições anteriores",
+  "windows": {
+    "command": [
+      "w32tm",
+      "/query",
+      "/status"
+    ],
+    "returncode": 2147943462,
+    "output": "Ocorreu o seguinte erro: O servi‡o nÆo foi iniciado. (0x80070426)\n"
+  },
+  "comparison": {
+    "command": [
+      "w32tm",
+      "/stripchart",
+      "/computer:time.windows.com",
+      "/samples:3",
+      "/dataonly"
+    ],
+    "returncode": 0,
+    "output": "Acompanhando time.windows.com [40.119.6.228:123].\nColetando 3 amostras.\nA hora atual ‚ 12/11/2026 16:18:03.\n16:18:03, +22.1388157s\n16:18:05, +22.1386360s\n16:18:07, +22.1390693s\n"
+  },
+  "limitation": "Serviço W32Time parado. Iniciar o serviço exige elevação administrativa real do Windows, indisponível nesta sessão. Sem ajuste manual de horário e sem alegação de sincronismo confirmado.",
+  "next_step_admin": [
+    "Start-Service W32Time",
+    "w32tm /resync /rediscover",
+    "w32tm /query /status"
+  ]
+}

@@ -116,6 +116,17 @@ Verifique a evidência entregue com `python tools/verify_evidence.py`. Para nova
 
 E1, E3 e E4 estão reunidos no relatório técnico identificado. E2 é este repositório. O vídeo deve mostrar demonstração real: SQLi corrigida, alarme local, fila/reconciliação, certificados, permissões e resultados de IA. O enunciado menciona vídeo na rubrica, mas não fixa sua duração. O roteiro sugere uma edição de aproximadamente 5 minutos, a confirmar com o professor. O link do vídeo ainda não existe.
 
+## Revisão complementar do escopo e da interface
+
+O enunciado (página 10) permite containers e simuladores; hardware real é diferencial, não obrigatório. Não é necessário montar placa ou sensor externo para esta entrega. RT-06 exige VPN borda-nuvem e MFA quando houver administração remota. O piloto usa WireGuard e MFA no painel; SSH/RDP remoto não é oferecido. Isso não transforma WireGuard em um protocolo de login humano com TOTP.
+
+- `evidence/energy-scenario.json`: cenário energético sintético calculado, sem wattímetro. Hipótese de 15 W × 1802 s / 3600 = 7,5083 Wh por borda; cenários de 8/25 W mostram sensibilidade. Não são medições elétricas. Reproduzir: `python tools/estimate_energy.py`.
+- `evidence/email-policy-tests.json`: 9/9 verificações offline de SPF (pyspf), DKIM e alinhamento DMARC estrito. Nenhum envio SMTP ou DNS público. Reproduzir: `python tests/run_email_auth.py` após instalar requirements.
+- `evidence/review/accessibility.json`: 9/9 verificações de navegador, incluindo login por teclado, rótulos explícitos, foco visível, contraste selecionado, refluxo em 320 CSS px e zoom CSS 200%. Não é certificação integral WCAG nem teste com leitor de tela/usuários.
+- O horário absoluto segue pendente: W32Time está parado e a sessão não tem permissão administrativa para iniciá-lo. `docs/AJUSTAR_HORARIO_WINDOWS.ps1` contém os comandos para o usuário executar como administrador. As evidências anteriores não foram reescritas; eventual nova coleta deve ser separada.
+
+Para repetir a acessibilidade, instale Playwright em ambiente de testes Node separado e disponibilize o módulo em NODE_PATH. O teste foi executado no Edge/Chromium pelo Playwright do ambiente de desenvolvimento. Execute `python tools/run_accessibility.py --credentials .runtime/docker/edge/credentials.json`; forneça `--browser CAMINHO_DO_CHROMIUM` se usar navegador próprio, ou instale o Chromium pelo Playwright. O processo recebe a credencial por stdin e nunca a imprime; não use captura de tela do arquivo privado.
+
 ## Uso de IA
 
 OpenAI Codex/ChatGPT foi utilizado como apoio na estruturação da arquitetura, geração e revisão de código, automação dos testes, elaboração de gráficos e redação. As evidências são saídas das execuções descritas. O autor deve revisar o material, reproduzir os testes e dominar a explicação. Não foi usado LLM dentro do sistema operacional do projeto nem para comandar atuadores.

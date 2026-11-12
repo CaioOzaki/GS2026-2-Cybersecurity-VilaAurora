@@ -1,0 +1,101 @@
+{
+  "utc_host": "2026-11-12T19:29:10.306940+00:00",
+  "scope": "UBS em cinco containers Linux; redes virtuais reais no Docker Desktop/WSL2",
+  "tests": [
+    {
+      "test": "Operador alcança painel",
+      "source": "operator",
+      "destination": "172.29.20.2",
+      "port": 8080,
+      "expected_reachable": true,
+      "reachable": true,
+      "passed": true
+    },
+    {
+      "test": "Administração alcança painel",
+      "source": "admin",
+      "destination": "172.29.30.2",
+      "port": 8080,
+      "expected_reachable": true,
+      "reachable": true,
+      "passed": true
+    },
+    {
+      "test": "IoT alcança listener MQTT TLS",
+      "source": "field",
+      "destination": "172.29.10.2",
+      "port": 8883,
+      "expected_reachable": true,
+      "reachable": true,
+      "passed": true
+    },
+    {
+      "test": "Operador não alcança MQTT",
+      "source": "operator",
+      "destination": "172.29.20.2",
+      "port": 8883,
+      "expected_reachable": false,
+      "reachable": false,
+      "error": "TimeoutError",
+      "passed": true
+    },
+    {
+      "test": "IoT não alcança painel",
+      "source": "field",
+      "destination": "172.29.10.2",
+      "port": 8080,
+      "expected_reachable": false,
+      "reachable": false,
+      "error": "TimeoutError",
+      "passed": true
+    },
+    {
+      "test": "Coletor bloqueado fora do túnel",
+      "source": "edge",
+      "destination": "172.29.0.2",
+      "port": 9443,
+      "expected_reachable": false,
+      "reachable": false,
+      "error": "ConnectionRefusedError",
+      "passed": true
+    },
+    {
+      "test": "HTTPS mTLS pelo WireGuard",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "test": "Processos principais sem root",
+      "uids": {
+        "cloud": 1000,
+        "edge": 1000,
+        "field": 1000,
+        "operator": 1000,
+        "admin": 1000
+      },
+      "passed": true
+    },
+    {
+      "test": "Visualizador publicado em loopback com saída geral bloqueada",
+      "bindings": {
+        "cloud": {},
+        "edge": {},
+        "field": {},
+        "operator": {
+          "8088/tcp": [
+            {
+              "HostIp": "127.0.0.1",
+              "HostPort": "8088"
+            }
+          ]
+        },
+        "admin": {}
+      },
+      "viewer_published": true,
+      "passed": true
+    }
+  ],
+  "passed": 9,
+  "total": 9,
+  "note": "TLS do MQTT é validado separadamente por probe_mqtt.py. Administração remota SSH/RDP não é oferecida."
+}

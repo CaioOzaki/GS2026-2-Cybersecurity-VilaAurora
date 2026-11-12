@@ -1,0 +1,8 @@
+{
+  "utc_host": "2026-11-12T19:30:58.094267+00:00",
+  "scope": "Aquisição lógica complementar da revisão; conserva arquivos nativos e Linux anteriores.",
+  "added": "Testes reais de navegador e e-mail offline; cenário energético sintético; estado atual de relógio e rede.",
+  "clock": "Horário do host sem sincronismo absoluto confirmado; dados anteriores não foram corrigidos retroativamente.",
+  "synthetic_energy": true,
+  "private_material_excluded": true
+}

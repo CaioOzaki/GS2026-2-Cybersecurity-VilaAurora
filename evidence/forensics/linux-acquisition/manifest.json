@@ -1,0 +1,226 @@
+{
+  "acquired_utc_host": "2026-11-12T06:18:07.424984+00:00",
+  "scope": "Manifesto consolidado das fases nativa e Linux; aquisição lógica, sem imagem de disco/memória. Manifesto anterior preservado.",
+  "files": [
+    {
+      "file": "evidence/ai.json",
+      "bytes": 682,
+      "sha256": "437c5c887d8523889125ed858eb393cbba7a52f27c6238ad2d2d360eb85f67c2"
+    },
+    {
+      "file": "evidence/chaos.json",
+      "bytes": 17896,
+      "sha256": "a998fd077c827eddbf666258b5a7ba5b25c84bbece1cc484d71eacb273de3896"
+    },
+    {
+      "file": "evidence/dashboard.png",
+      "bytes": 52011,
+      "sha256": "6f75ff695ee38db71213ce8952973f14c5ac452d3a833d58c304fe47cd098da1"
+    },
+    {
+      "file": "evidence/detections.json",
+      "bytes": 2972,
+      "sha256": "f60ca123bea4e8991c54f459afa83e733d9cadb6ce06abd4bd6939946929f42a"
+    },
+    {
+      "file": "evidence/docker/certificate-rotation.json",
+      "bytes": 235,
+      "sha256": "a387ea829b7ffc7f83b257cb418cd6a9e85bd80e478f569827fc3f62a24e3e69"
+    },
+    {
+      "file": "evidence/docker/chaos-progress.json",
+      "bytes": 78,
+      "sha256": "f0f5b41fa79f7e1feeb0323159cc36ab6b3da4978490afb52047d07e1d80baed"
+    },
+    {
+      "file": "evidence/docker/chaos-tunnel.json",
+      "bytes": 46605,
+      "sha256": "9e634cb6b70762f6f314bcd92c9785798936ad4f175ac08ce3d40e4a6b311787"
+    },
+    {
+      "file": "evidence/docker/clock-linux.txt",
+      "bytes": 1974,
+      "sha256": "0edfaa26437b1a3ff49473700b02d3364db164467f4c940ac40f6f9d769e1684"
+    },
+    {
+      "file": "evidence/docker/containers.txt",
+      "bytes": 8406,
+      "sha256": "b59f4d5fe8c8bc8cf1c1835671150d3ee4f183e187eeb0d6a71c5a6f7dc0c5bb"
+    },
+    {
+      "file": "evidence/docker/dashboard-offline.png",
+      "bytes": 48900,
+      "sha256": "fdfa10592a3b6c1919f4874089dc3df6b4471e07b42a3bd3c80633fdfb67e3d9"
+    },
+    {
+      "file": "evidence/docker/dashboard-online.png",
+      "bytes": 48230,
+      "sha256": "5843119e86c6e788d12f03936cedd101314025e7b03c6cd7acc6082e5bdde25c"
+    },
+    {
+      "file": "evidence/docker/dashboard-recovered.png",
+      "bytes": 47978,
+      "sha256": "17a177c75a5f36e9c92e5246c978591f59a0d53252624752b75ab21e625f0d9e"
+    },
+    {
+      "file": "evidence/docker/final-deployment.json",
+      "bytes": 734,
+      "sha256": "20cc41eee86984c15fdc77bfac14873b143d3be1bece5f52d36afc8e21b5b4bc"
+    },
+    {
+      "file": "evidence/docker/firewall-cloud.txt",
+      "bytes": 267,
+      "sha256": "5aa4ac054d189209d378e9e036204dd92eca910c52a1232272ffa3bb764415c9"
+    },
+    {
+      "file": "evidence/docker/firewall-edge.txt",
+      "bytes": 490,
+      "sha256": "26aa7b2ae25e55dc87464f6d7e6a20cccdb3a4153acb44f35110d8586f87ccfb"
+    },
+    {
+      "file": "evidence/docker/firewall-viewer.txt",
+      "bytes": 332,
+      "sha256": "0e885e13c5103c30f80468542938853634e833331a0241f77154906bb4915e4d"
+    },
+    {
+      "file": "evidence/docker/long-run-deployment.json",
+      "bytes": 779,
+      "sha256": "06a8caf2cffb5c8e0cd048cc7a7f75ed6e28aa4bdfb4e7bffa58d3e0366fcc0a"
+    },
+    {
+      "file": "evidence/docker/mqtt-after.json",
+      "bytes": 359,
+      "sha256": "564fa7115d28a1c4dfba4228a1a5a6b214bd64f3f1337c9aa941d764446a8e07"
+    },
+    {
+      "file": "evidence/docker/mqtt-before.json",
+      "bytes": 593,
+      "sha256": "f46937b9b15ff63697a78c0622681af217a5abf2c96eda3146fdbfa475013714"
+    },
+    {
+      "file": "evidence/docker/network.json",
+      "bytes": 2483,
+      "sha256": "126f65e06ae73293cb97954cfdb2685bb71b524ab3a241ca8e151764b2a957ba"
+    },
+    {
+      "file": "evidence/docker/routes.txt",
+      "bytes": 318,
+      "sha256": "08a42ae0c577ae7f515a3d70a64d0250758d83bc0aa97ba4744aebfd35cbfea0"
+    },
+    {
+      "file": "evidence/docker/segments.txt",
+      "bytes": 94,
+      "sha256": "a8bf5ee91c18235ac3d70118c8b6581a81a99bdde4c3e7cd1f4d2213d510f5a3"
+    },
+    {
+      "file": "evidence/docker/short-regression.json",
+      "bytes": 521,
+      "sha256": "e239e0219c75d7f0304550912a3ccfc879df829c047cf1c8b385be5bd2fc2b8e"
+    },
+    {
+      "file": "evidence/docker/tunnel-https.txt",
+      "bytes": 4,
+      "sha256": "c11e3f4837efde2441e23a7b9da02131f53bf59fddeb7147c4ab81afe400460f"
+    },
+    {
+      "file": "evidence/docker/ui.json",
+      "bytes": 2054,
+      "sha256": "26f74e042a6a75e7269ad153e94527395837f7d4ffe883df1abcbea9578730e8"
+    },
+    {
+      "file": "evidence/docker/wireguard.txt",
+      "bytes": 711,
+      "sha256": "b6276c665fd176fb6917f60652cf54a1cd2f8153b27d89cf645bee2c0bcff1f8"
+    },
+    {
+      "file": "evidence/email-auth.json",
+      "bytes": 962,
+      "sha256": "20548de00c66247f0efb8d789efe22fc4287f93886c7d6aaecd2605b7bb30d73"
+    },
+    {
+      "file": "evidence/forensics/chain-verification.json",
+      "bytes": 331,
+      "sha256": "a7e98653273d3fd785567be594a3b7480a5f2d58e434d693ab95e22814a46780"
+    },
+    {
+      "file": "evidence/forensics/clock-status.json",
+      "bytes": 401,
+      "sha256": "29775374829676cba3b4a6310ae91c5cb83652d6897c83bd805f598f73f69f76"
+    },
+    {
+      "file": "evidence/forensics/continuity-events.jsonl",
+      "bytes": 1384425,
+      "sha256": "639ac899158c2b9a3ec11ee5355fb485bbcd787edbf1a58b930b1cf7b9989f37"
+    },
+    {
+      "file": "evidence/forensics/custody.json",
+      "bytes": 1152,
+      "sha256": "01890b3ac5cda68cae366f6f91af17f430c14b6eaf6994af542455bca6312794"
+    },
+    {
+      "file": "evidence/forensics/database-observation.json",
+      "bytes": 271,
+      "sha256": "da2331e199c805f1934012880e519bb9ad267fc461a87cc5e6f75c7bde651681"
+    },
+    {
+      "file": "evidence/forensics/linux-custody.json",
+      "bytes": 982,
+      "sha256": "50d2a33dc5f1657f13073814c0255073ec9cc0f5ae1341a6a69b6174279ffdef"
+    },
+    {
+      "file": "evidence/forensics/native-acquisition/manifest.json",
+      "bytes": 2869,
+      "sha256": "9b4e8ba4625462a56763594025d2336d1c3b8e098566d7cc6915e17d38561b9b"
+    },
+    {
+      "file": "evidence/forensics/native-acquisition/manifest.sha256",
+      "bytes": 1546,
+      "sha256": "f63d5c3d971dd18ad5722f7a54ca3e437cec698e73bc6d4736998dfb1a5803c3"
+    },
+    {
+      "file": "evidence/forensics/security-events.jsonl",
+      "bytes": 16278,
+      "sha256": "7a295b80ecf8d7b65cfd7a81ec15afd8293c4d55d0961e8594df17b9aa167c72"
+    },
+    {
+      "file": "evidence/forensics/timeline.json",
+      "bytes": 3836,
+      "sha256": "29faf78885f4a76fb1ec2fa4283974c98314bb9cd1d98cea2e7e9e60d12a5be1"
+    },
+    {
+      "file": "evidence/linux-regression/detections.json",
+      "bytes": 2890,
+      "sha256": "386f3b968d7ccb8ebf5fb2f21b92de4bf327089535b00e9f08306cc8c7483452"
+    },
+    {
+      "file": "evidence/linux-regression/security.json",
+      "bytes": 6690,
+      "sha256": "20d121fa72a5a25d965736f56f4299c14cbc7298912f3009f9d254da1c312dc3"
+    },
+    {
+      "file": "evidence/phishing-template.eml",
+      "bytes": 267,
+      "sha256": "6a3dd24d72c7299d1c3e2fb45d816afed0a617ff2fac75d129506288735341e2"
+    },
+    {
+      "file": "evidence/phishing.json",
+      "bytes": 450,
+      "sha256": "0aa54a36cb315460e51ff40cd436215f496e95204fd196f788f74cfd8d761106"
+    },
+    {
+      "file": "evidence/security.json",
+      "bytes": 6904,
+      "sha256": "19372f191367be04b418e36e0422157f9e71ed712387c027ac652527318bff8a"
+    },
+    {
+      "file": "evidence/signed-message.eml",
+      "bytes": 776,
+      "sha256": "808e10347244a8fdeaad1c960ce5c5e1bfd4deed29d55e4ebd5880d5b5b6ffeb"
+    },
+    {
+      "file": "evidence/ui.json",
+      "bytes": 315,
+      "sha256": "f4616c7be7462a0f8714d5a36c3c1d09d52cccbb2a88ede55f939caa0e7f1a06"
+    }
+  ]
+}

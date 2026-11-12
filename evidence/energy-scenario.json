@@ -1,0 +1,34 @@
+{
+  "classification": "Cenário sintético calculado; NÃO é medição de energia elétrica",
+  "physical_measurement": false,
+  "model": "E(Wh) = potência média hipotética (W) × duração (s) / 3600",
+  "assumptions": "Sensibilidade de 8, 15 e 25 W para uma futura borda física; 15 W é a hipótese do orçamento. Cinco nós são uma extrapolação do produto, não cinco máquinas físicas medidas.",
+  "measured_input": "Apenas a duração monotônica do ensaio foi medida; potência não foi medida nem inferida da CPU.",
+  "scenarios": [
+    {
+      "assumed_average_watts": 8,
+      "outage_seconds": 1802.000498112,
+      "energy_one_node_wh": 4.0044,
+      "energy_five_independent_nodes_wh": 20.0222,
+      "annual_one_node_kwh": 70.08,
+      "annual_five_nodes_kwh": 350.4
+    },
+    {
+      "assumed_average_watts": 15,
+      "outage_seconds": 1802.000498112,
+      "energy_one_node_wh": 7.5083,
+      "energy_five_independent_nodes_wh": 37.5417,
+      "annual_one_node_kwh": 131.4,
+      "annual_five_nodes_kwh": 657.0
+    },
+    {
+      "assumed_average_watts": 25,
+      "outage_seconds": 1802.000498112,
+      "energy_one_node_wh": 12.5139,
+      "energy_five_independent_nodes_wh": 62.5695,
+      "annual_one_node_kwh": 219.0,
+      "annual_five_nodes_kwh": 1095.0
+    }
+  ],
+  "limitation": "Docker/CPU/RAM não fornecem consumo elétrico confiável do nó. RT-22 mantém essa ressalva; hardware real é opcional no enunciado."
+}

@@ -1,0 +1,80 @@
+{
+  "scope": "DNS fictício resolvido em memória; nenhum envio SMTP, DNS público ou pessoa real. DMARC avalia o alinhamento estrito configurado, não é um receptor SMTP completo.",
+  "libraries": {
+    "pyspf": "2.0.14",
+    "dkimpy": "1.1.8"
+  },
+  "policy": "v=DMARC1; p=quarantine; adkim=s; aspf=s; pct=100",
+  "tests": [
+    {
+      "name": "SPF: IP autorizado",
+      "actual": "pass",
+      "expected": "pass",
+      "passed": true
+    },
+    {
+      "name": "SPF: IP indevido",
+      "actual": "fail",
+      "expected": "fail",
+      "passed": true
+    },
+    {
+      "name": "DKIM: mensagem íntegra",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "DKIM: corpo adulterado",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "DMARC: SPF alinhado basta",
+      "actual": "pass",
+      "expected": "pass",
+      "passed": true
+    },
+    {
+      "name": "DMARC: DKIM alinhado basta",
+      "actual": "pass",
+      "expected": "pass",
+      "passed": true
+    },
+    {
+      "name": "DMARC: ambas autenticações falham",
+      "actual": "quarantine",
+      "expected": "quarantine",
+      "passed": true
+    },
+    {
+      "name": "DMARC: SPF válido de domínio não alinhado",
+      "actual": "quarantine",
+      "expected": "quarantine",
+      "passed": true
+    },
+    {
+      "name": "DMARC: assinatura válida sem alinhamento ao From",
+      "actual": "quarantine",
+      "expected": "quarantine",
+      "passed": true
+    }
+  ],
+  "dns_queries": [
+    {
+      "name": "vila-aurora.test",
+      "type": "TXT"
+    },
+    {
+      "name": "vila-aurora.test",
+      "type": "TXT"
+    },
+    {
+      "name": "estrangeiro.test",
+      "type": "TXT"
+    }
+  ],
+  "passed": 9,
+  "total": 9
+}

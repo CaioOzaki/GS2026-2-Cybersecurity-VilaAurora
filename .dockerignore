@@ -1,6 +1,7 @@
 .git
 .runtime*
 .venv
+.test-tools
 __pycache__
 **/__pycache__
 *.key

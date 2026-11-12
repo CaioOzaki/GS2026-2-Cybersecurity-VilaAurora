@@ -61,3 +61,9 @@ Campanha atual mede a instrumentação com cinco agentes fictícios. Não fornec
 ## Acessibilidade
 
 Painel em português, texto de 18 px, rótulos associados, foco visível, link de salto, estado textual (sem depender só da cor), HTML sem imagens de texto e controles nativos. Teste de navegador validou login, cinco cartões e foco por Tab. Verificar contraste por cálculo, zoom 200%, leitor de tela e jornada completa antes de afirmar conformidade WCAG 2.1 AA. Referência: https://www.w3.org/WAI/WCAG21/quickref/ .
+
+## Esclarecimentos da revisão final
+
+Containers e simuladores atendem ao escopo permitido; o enunciado não obriga hardware real. O cenário energético em `evidence/energy-scenario.json` é uma estimativa explícita, não medição. A potência média é hipotética; não converter CPU em watts sem um modelo físico validado. O exemplo orçamentário de 15 W implica 7,5083 Wh por borda durante o corte medido de 1802 s e 657 kWh/ano para cinco bordas físicas hipotéticas em operação contínua.
+
+Foram testados nove aspectos selecionados de acessibilidade e nove verificações offline de autenticação/alinhamento de e-mail. O acesso administrativo remoto continua não oferecido; habilitá-lo exige VPN/ZTNA com MFA. O relógio do host ainda requer início de W32Time e ressincronização pelo usuário com elevação administrativa; confirmar a origem e o estado antes de novas coletas.

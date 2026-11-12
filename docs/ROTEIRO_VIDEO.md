@@ -51,3 +51,11 @@ Deixar Docker Desktop ativo. No Ubuntu: `cd ~/GS2026-2-Cybersecurity-VilaAurora`
 ## Publicação
 
 Publicar no YouTube como público ou não listado e testar o link sem login. Mantê-lo acessível até a divulgação das notas. Enviar o link para inclusão na identificação de entrega; não inventar endereço. Repositório E2: https://github.com/CaioOzaki/GS2026-2-Cybersecurity-VilaAurora .
+
+## Complemento após revisão do escopo
+
+Se perguntarem sobre hardware, explicar: “O enunciado permite um laboratório com dispositivos em containers; hardware real é um diferencial. Nosso projeto foi executado nesse formato.”
+
+Se citar energia, dizer: “Para dimensionamento, usamos um cenário sintético de 15 W por borda, equivalente a aproximadamente 7,51 Wh durante o intervalo de 30 minutos. Essa é uma estimativa calculada, não uma medição elétrica.” CPU, memória, filas e perdas apresentados no vídeo continuam sendo as medições reais registradas.
+
+Os testes adicionais de e-mail e acessibilidade passaram 9/9 cada. Evitar afirmar conformidade integral WCAG ou DNS publicado na Internet. O horário do Windows continua sendo uma pendência administrativa, já registrada no relatório.
